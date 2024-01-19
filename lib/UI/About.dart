@@ -108,29 +108,37 @@ class About extends StatelessWidget {
                       Container(
                         width: size.width * 0.20,
                         height: size.height * 0.25,
-                        child: Column(
-                          children: [
-                            technology(context, "Dart"),
-                            technology(context, "Flutter"),
-                            technology(context, "Firebase"),
-                            technology(context, "UI/UX"),
-                            technology(context, "API"),
-                            technology(context, "NodeJs"),
-                          ],
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              technology(context, "Dart"),
+                              technology(context, "Flutter"),
+                              technology(context, "Firebase"),
+                              technology(context, "UI/UX"),
+                              technology(context, "API"),
+                              technology(context, "NodeJs"),
+                            ],
+                          ),
                         ),
                       ),
                       Container(
                         width: size.width * 0.20,
                         height: size.height * 0.25,
-                        child: Column(
-                          children: [
-                            technology(context, "Java, C/C++."),
-                            technology(context, "Data Structures and Algorithms"),
-                            technology(context, "MYSQL"),
-                            technology(context, "Git - Github"),
-                            technology(context, "Python"),
-                            technology(context, "Machine Learning"),
-                          ],
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              technology(context, "Java, C/C++."),
+                              technology(context, "Data Structures and Algorithms"),
+                              technology(context, "MYSQL"),
+                              technology(context, "Git - Github"),
+                              technology(context, "Python"),
+                              technology(context, "Machine Learning"),
+                            ],
+                          ),
                         ),
                       )
                     ],

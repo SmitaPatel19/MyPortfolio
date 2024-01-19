@@ -74,28 +74,23 @@ class _WorkState extends State<Work> {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               CircleAvatar(
-                                backgroundColor: Colors.pink,
-                                child: FaIcon(FontAwesomeIcons.laptopHouse,
-                                    color: Colors.white),
-                              ),
-                              CircleAvatar(
                                 backgroundColor: Colors.red,
-                                child: FaIcon(FontAwesomeIcons.freeCodeCamp,
-                                    color: Colors.white),
-                              ),
-                              CircleAvatar(
-                                backgroundColor: Colors.brown,
                                 child: FaIcon(FontAwesomeIcons.laptopCode,
                                     color: Colors.white),
                               ),
                               CircleAvatar(
+                                backgroundColor: Colors.brown,
+                                child: FaIcon(FontAwesomeIcons.dev,
+                                    color: Colors.white),
+                              ),
+                              CircleAvatar(
                                 backgroundColor: Colors.deepOrange,
-                                child: FaIcon(FontAwesomeIcons.coffee,
+                                child: FaIcon(FontAwesomeIcons.mugSaucer,
                                     color: Colors.white),
                               ),
                               CircleAvatar(
                                 backgroundColor: Colors.deepPurple,
-                                child: FaIcon(FontAwesomeIcons.dev,
+                                child: FaIcon(FontAwesomeIcons.freeCodeCamp,
                                     color: Colors.white),
                               ),
                             ],

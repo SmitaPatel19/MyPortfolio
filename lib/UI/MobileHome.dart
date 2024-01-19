@@ -47,8 +47,8 @@ class _MobileHomeState extends State<MobileHome> {
                   currentAccountPicture: CircleAvatar(
                     child: Icon(Icons.person),
                   ),
-                  accountName: Text("Tushar Nikam"),
-                  accountEmail: Text("champ96k@gmail.com")),
+                  accountName: Text("Smita Patel"),
+                  accountEmail: Text("miss.smitapatel04@gmail.com")),
               ListTile(
                 title: Text("Share"),
                 leading: Icon(Icons.share),
@@ -94,7 +94,7 @@ class _MobileHomeState extends State<MobileHome> {
                 height: size.height * 0.02,
               ),
               CustomText(
-                text: "Tushar Nikam.",
+                text: "Smita Patel.",
                 textsize: 52.0,
                 color: Color(0xffCCD6F6),
                 fontWeight: FontWeight.w900,
@@ -116,7 +116,12 @@ class _MobileHomeState extends State<MobileHome> {
                 child: Wrap(
                   children: [
                     Text(
-                      "I'm a freelancer based in Nashik, IN specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.",
+                      "I'm a second-year student at the prestigious Indian Institute of Information Technology Vadodara."
+                          " \nMy journey in the world of technology has equipped me with skills in crafting websites, developing applications using Flutter, and navigating the intricacies of APIs."
+                          " \n🚀 I am passionate about exploring the latest technologies, and I am currently on the lookout for an internship opportunity "
+                          "where I can contribute, learn, and grow.  "
+                          "\n💻 Proficient in web development and mobile applications, particularly with Flutter, I am eager to apply my knowledge in a real-world setting."
+                          "\n🤝 Open to collaboration and always ready to lend a helping hand. Let's build something incredible together!",
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 15.0,
@@ -212,7 +217,7 @@ class _MobileHomeState extends State<MobileHome> {
                         children: [
                           CustomText(
                             text:
-                                "Hello! I'm Tushar, a Freelancer based in Nashik, IN.\nI enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.\n",
+                            "Hello! I'm Smita, a Student at IIITV.\n\nI enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.\n\n",
                             textsize: 16.0,
                             color: Color(0xff828DAA),
                             fontWeight: FontWeight.w500,
@@ -220,7 +225,7 @@ class _MobileHomeState extends State<MobileHome> {
                           ),
                           CustomText(
                             text:
-                                "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at University of Pune, as well as doing freelancing where I work on a wide variety of interesting and meaningful projects on a daily basis.\n",
+                            "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at IIITV, as well as creating projects where I work on a wide variety of interesting and meaningful projects on a daily basis.\n\n",
                             textsize: 16.0,
                             color: Color(0xff828DAA),
                             fontWeight: FontWeight.w500,
@@ -228,7 +233,7 @@ class _MobileHomeState extends State<MobileHome> {
                           ),
                           CustomText(
                             text:
-                                "Here are a few technologies I've been working with recently:\n\n",
+                            "Here are a few technologies I've been working with recently:\n\n",
                             textsize: 16.0,
                             color: Color(0xff828DAA),
                             fontWeight: FontWeight.w500,
@@ -247,25 +252,33 @@ class _MobileHomeState extends State<MobileHome> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                technology(context, "Dart"),
-                                technology(context, "Flutter"),
-                                technology(context, "Firebase"),
-                                technology(context, "UI/UX (Adobe XD)"),
-                              ],
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  technology(context, "Dart"),
+                                  technology(context, "Flutter"),
+                                  technology(context, "Firebase"),
+                                  technology(context, "UI/UX"),
+                                  technology(context, "API"),
+                                  technology(context, "NodeJs"),
+                                ],
+                              ),
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                technology(context, "C/C++"),
-                                technology(context, "HTML, & (S)Css"),
-                                technology(context, "MYSQL"),
-                                technology(context, "Java"),
-                              ],
+                            SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  technology(context, "Java, C/C++."),
+                                  technology(context, "Data Structures and Algorithms"),
+                                  technology(context, "MYSQL"),
+                                  technology(context, "Git - Github"),
+                                  technology(context, "Python"),
+                                  technology(context, "Machine Learning"),
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -726,7 +739,7 @@ class _MobileHomeState extends State<MobileHome> {
                         alignment: WrapAlignment.center,
                         children: [
                           Text(
-                            "Although I'm currently looking for SDE-1 opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+                            "Although I'm currently looking for internship opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white.withOpacity(0.4),
@@ -786,9 +799,31 @@ class _MobileHomeState extends State<MobileHome> {
                       size: 15.0,
                     ),
                     onPressed: () {
-                      method.launchURL("https://github.com/champ96k");
+                      method.launchURL("https://github.com/SmitaPatel19");
                     },
                   ),
+
+                  IconButton(
+                      icon: Image.asset("assets/images/leetcode.png",
+                        width: 15,
+                        height: 15,
+                        color: Colors.white,),
+                      color: Colors.white,
+                      iconSize: 15.0,
+                      onPressed: () {
+                        method.launchURL("https://leetcode.com/SmitaPatel/");
+                      }),
+
+                  IconButton(
+                      icon: Image.asset("assets/images/codechef.png",
+                        width: 15,
+                        height: 15,
+                        color: Colors.white,),
+                      color: Colors.white,
+                      iconSize: 15.0,
+                      onPressed: () {
+                        method.launchURL("https://www.codechef.com/users/smitapatel19");
+                      }),
                   IconButton(
                     icon: Icon(
                       FontAwesomeIcons.linkedin,
@@ -797,19 +832,16 @@ class _MobileHomeState extends State<MobileHome> {
                     ),
                     onPressed: () {
                       method.launchURL(
-                          "https://www.linkedin.com/in/tushar-nikam-a29a97131/");
+                          "https://www.linkedin.com/in/smita-patel-740162289/");
                     },
                   ),
                   IconButton(
-                    icon: Icon(
-                      FontAwesomeIcons.twitter,
-                      color: Colors.white,
-                      size: 15.0,
-                    ),
-                    onPressed: () {
-                      method.launchURL("https://twitter.com/champ_96k");
-                    },
-                  ),
+                      icon: Icon(Icons.call),
+                      color: Color(0xffffA8B2D1),
+                      iconSize: 16.0,
+                      onPressed: () {
+                        method.launchCaller();
+                      }),
                   IconButton(
                     icon: Icon(
                       Icons.mail,
@@ -834,7 +866,7 @@ class _MobileHomeState extends State<MobileHome> {
                 width: MediaQuery.of(context).size.width,
                 //color: Colors.white,
                 child: Text(
-                  "Designed & Built by Tushar Nikam 💙 Flutter",
+                  "Designed & Built by Smita Patel 💙 Flutter",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.4),

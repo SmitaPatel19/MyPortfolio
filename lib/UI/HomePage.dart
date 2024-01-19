@@ -380,7 +380,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic9.jpg",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/WhatsApp--UI-Clone");
+                                              "https://github.com/SmitaPatel19/My_Whatsapp");
                                         },
                                         projectDesc:
                                             "A Mobile app for both Android and IOS. View your Status, Chat, and call history. The purpose of this projcet is to Learn Flutter complex UI Design.",
@@ -391,10 +391,38 @@ class _HomePageState extends State<HomePage> {
                                       ),
 
                                       FeatureProject(
+                                        imagePath: "images/pic106.png",
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/SmitaPatel19/My-AI");
+                                        },
+                                        projectDesc:
+                                        "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                        projectTitle: "My AI",
+                                        tech1: "Dart",
+                                        tech2: "Flutter",
+                                        tech3: "Flutter UI",
+                                      ),
+
+                                      FeatureProject(
+                                        imagePath: "images/pic105.png",
+                                        ontab: () {
+                                          method.launchURL(
+                                              "https://github.com/SmitaPatel19/chatting-App-1st");
+                                        },
+                                        projectDesc:
+                                        "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                        projectTitle: "Sign up and Sign in",
+                                        tech1: "Dart",
+                                        tech2: "Flutter",
+                                        tech3: "Flutter UI",
+                                      ),
+
+                                      FeatureProject(
                                         imagePath: "images/pic2.jpg",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Flutter-Blog-App-using-Firebase");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A blog application using Flutter and firebase, In this project implement Firebase CURD operation, User can add post as well see all the post.",
@@ -408,7 +436,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic3.png",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Wallpaper-Hub-using-Flutter");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A Wallpaper application Using Pixel API, to show more than 5k+ images. User can Search any images, as well as Download and directly set Image as Wallpaper.",
@@ -422,7 +450,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic4.jpg",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/coronavirus-tracker-app");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A Flutter app to track Coronavirus outbreak, Current statistics of global total confirmed, deaths, recovered cases, Health news, coronavirus safety information and many more.",
@@ -436,7 +464,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic5.jpg",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Gender-Predictor-Flutter-App");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "In this app you can predict the gender with the help of name and probability of that name.",
@@ -450,7 +478,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic6.jpg",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/News-Hours-Apps-Using-Rest-API");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "complete news Application using rest API API link- https://newsapi.org, you can get all news.",
@@ -464,7 +492,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic7.jpg",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Flutter-wallpaper-App-using-Firebase");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "Flutter Wallpaper application using firebase as a backend with a cool animation, it show the all images that are store in firebase firestore.",
@@ -478,7 +506,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic8.jpg",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Flutter-Weather-Application");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "Weather app. This weather app is one of best free weather apps with full features: Local weather, weather map (weather map service) and weather widgets. Widgets for Android: The weather radar widget free and clock widget weather with beautiful style.",
@@ -507,7 +535,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic11.jpg",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Flutter-Neumorphic-Calculator-UI");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "To explore the flutter Neumorphic design",
@@ -737,7 +765,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic102.gif",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Flutter-Web-SolMusic-Landing-Page");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
@@ -751,7 +779,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic104.png",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Flutter-UI-Kit");
+                                              "https://github.com/SmitaPatel19/chatting-App-1st");
                                         },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
@@ -761,39 +789,12 @@ class _HomePageState extends State<HomePage> {
                                         tech3: "Flutter UI",
                                       ),
 
-                                      FeatureProject(
-                                        imagePath: "images/pic105.png",
-                                        ontab: () {
-                                          method.launchURL(
-                                              "https://github.com/champ96k/Flutter-UI-Kit");
-                                        },
-                                        projectDesc:
-                                            "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                        projectTitle: "Sign up and Sign in",
-                                        tech1: "Dart",
-                                        tech2: "Flutter",
-                                        tech3: "Flutter UI",
-                                      ),
-
-                                      FeatureProject(
-                                        imagePath: "images/pic106.png",
-                                        ontab: () {
-                                          method.launchURL(
-                                              "https://github.com/champ96k/Flowers-Shop-Mobile-App-Store");
-                                        },
-                                        projectDesc:
-                                            "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                        projectTitle: "Online Flowers Shop",
-                                        tech1: "Dart",
-                                        tech2: "Flutter",
-                                        tech3: "Flutter UI",
-                                      ),
 
                                       FeatureProject(
                                         imagePath: "images/pic107.jfif",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Food-Delivery-App-UI");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
@@ -807,7 +808,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic108.jfif",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Flutter-Plant-Shop-UI-Design");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
@@ -821,7 +822,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic109.jfif",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Foody-App-UI-Design");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
@@ -835,7 +836,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic110.jfif",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Flutter-Online-Food-Order-App-UI");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
@@ -849,7 +850,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic501.png",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Ganpati-Bappa-");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
@@ -863,7 +864,7 @@ class _HomePageState extends State<HomePage> {
                                         imagePath: "images/pic506.png",
                                         ontab: () {
                                           method.launchURL(
-                                              "https://github.com/champ96k/Netflix-Web-Clone-Using-Flutter");
+                                              "https://github.com/SmitaPatel19?tab=repositories");
                                         },
                                         projectDesc:
                                             "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
@@ -915,7 +916,7 @@ class _HomePageState extends State<HomePage> {
                                           Wrap(
                                             children: [
                                               Text(
-                                                "Although I'm currently looking for SDE-1 opportunities, my inbox is \nalways open. Whether you have a question or just want to say hi, I'll try my \nbest to get back to you!",
+                                                "Although I'm currently looking for internships opportunities, my inbox is \nalways open. Whether you have a question or just want to say hi, I'll try my \nbest to get back to you!",
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
                                                   color: Colors.white
@@ -980,7 +981,7 @@ class _HomePageState extends State<HomePage> {
                                           100,
                                       //color: Colors.white,
                                       child: Text(
-                                        "Designed & Built by Tushar Nikam 💙 Flutter",
+                                        "Designed & Built by Smita Patel 💙 Flutter",
                                         style: TextStyle(
                                           color: Colors.white.withOpacity(0.4),
                                           letterSpacing: 1.75,
@@ -1007,7 +1008,7 @@ class _HomePageState extends State<HomePage> {
                         RotatedBox(
                           quarterTurns: 45,
                           child: Text(
-                            "tusharnikam2021@gmail.com",
+                            "miss.smitapatel04@gmail.com",
                             style: TextStyle(
                               color: Colors.grey.withOpacity(0.6),
                               letterSpacing: 3.0,
