@@ -61,7 +61,7 @@ class About extends StatelessWidget {
                       width: size.width * 0.01,
                     ),
                     Container(
-                      width: size.width / 4,
+                      width: size.width / 4.5,
                       height: 1.10,
                       color: Color(0xff303C55),
                     ),
@@ -77,14 +77,14 @@ class About extends StatelessWidget {
                   children: [
                     CustomText(
                       text:
-                          "Hello! I'm Tushar, a Freelancer based in Nashik, IN.\n\nI enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.\n\n",
+                          "Hello! I'm Smita, a Student at IIITV.\n\nI enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.\n\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       letterSpacing: 0.75,
                     ),
                     CustomText(
                       text:
-                          "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at University of Pune, as well as doing freelancing where I work on a wide variety of interesting and meaningful projects on a daily basis.\n\n",
+                          "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at IIITV, as well as creating projects where I work on a wide variety of interesting and meaningful projects on a daily basis.\n\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       letterSpacing: 0.75,
@@ -107,25 +107,29 @@ class About extends StatelessWidget {
                     children: [
                       Container(
                         width: size.width * 0.20,
-                        height: size.height * 0.15,
+                        height: size.height * 0.25,
                         child: Column(
                           children: [
                             technology(context, "Dart"),
                             technology(context, "Flutter"),
                             technology(context, "Firebase"),
-                            technology(context, "UI/UX (Adobe Xd)"),
+                            technology(context, "UI/UX"),
+                            technology(context, "API"),
+                            technology(context, "NodeJs"),
                           ],
                         ),
                       ),
                       Container(
-                        width: size.width * 0.15,
-                        height: size.height * 0.15,
+                        width: size.width * 0.20,
+                        height: size.height * 0.25,
                         child: Column(
                           children: [
-                            technology(context, "C/C++, Java."),
-                            technology(context, "HTML & (S)CSS"),
+                            technology(context, "Java, C/C++."),
+                            technology(context, "Data Structures and Algorithms"),
                             technology(context, "MYSQL"),
                             technology(context, "Git - Github"),
+                            technology(context, "Python"),
+                            technology(context, "Machine Learning"),
                           ],
                         ),
                       )

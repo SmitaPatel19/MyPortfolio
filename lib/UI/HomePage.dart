@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              //Mavigation Bar
+              //Navigation Bar
               Container(
                 height: size.height * 0.14,
                 width: size.width,
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       IconButton(
                           icon: Icon(
-                            Icons.change_history,
+                            Icons.navigation_rounded,
                             size: 32.0,
                             color: Color(0xff64FFDA),
                           ),
@@ -152,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                             child: TextButton(
                               onPressed: () {
                                 method.launchURL(
-                                    "https://drive.google.com/file/d/1yHLcrN5pCUGIeT8SrwC2L95Lv0MVbJpx/view?usp=sharing");
+                                    "https://drive.google.com/file/d/1heL9WIpCgP-4_7N8qlMp-iJNV6-mc8zf/view?usp=sharings");
                               },
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -188,21 +188,36 @@ class _HomePageState extends State<HomePage> {
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
-                              method.launchURL("https://github.com/champ96k");
+                              method.launchURL("https://github.com/SmitaPatel19");
                             }),
+
                         IconButton(
-                            icon: FaIcon(FontAwesomeIcons.twitter),
+                            icon: Image.asset("assets/images/leetcode.png",
+                                width: 16,
+                                height: 16,
+                                color: Color(0xffffA8B2D1),),
                             color: Color(0xffffA8B2D1),
                             iconSize: 16.0,
                             onPressed: () {
-                              method.launchURL("https://twitter.com/champ_96k");
+                              method.launchURL("https://leetcode.com/SmitaPatel/");
+                            }),
+
+                        IconButton(
+                            icon: Image.asset("assets/images/codechef.png",
+                              width: 16,
+                              height: 16,
+                              color: Color(0xffffA8B2D1),),
+                            color: Color(0xffffA8B2D1),
+                            iconSize: 16.0,
+                            onPressed: () {
+                              method.launchURL("https://www.codechef.com/users/smitapatel19");
                             }),
                         IconButton(
                           icon: FaIcon(FontAwesomeIcons.linkedin),
                           color: Color(0xffffA8B2D1),
                           onPressed: () {
                             method.launchURL(
-                                "https://www.linkedin.com/in/tushar-nikam-a29a97131/");
+                                "https://www.linkedin.com/in/smita-patel-740162289/");
                           },
                           iconSize: 16.0,
                         ),
@@ -257,7 +272,7 @@ class _HomePageState extends State<HomePage> {
                                     height: 6.0,
                                   ),
                                   CustomText(
-                                    text: "Tushar Nikam.",
+                                    text: "Smita Patel.",
                                     textsize: 68.0,
                                     color: Color(0xffCCD6F6),
                                     fontWeight: FontWeight.w900,
@@ -278,7 +293,12 @@ class _HomePageState extends State<HomePage> {
                                   Wrap(
                                     children: [
                                       Text(
-                                        "I'm a freelancer based in Nashik, IN specializing in \nbuilding (and occasionally designing) exceptional websites, \napplications, and everything in between.",
+                                        "I'm a second-year student at the prestigious Indian Institute of Information Technology Vadodara."
+                                            " \nMy journey in the world of technology has equipped me with skills in crafting websites, developing applications using Flutter, and navigating the intricacies of APIs."
+                                            " \n🚀 I am passionate about exploring the latest technologies, and I am currently on the lookout for an internship opportunity "
+                                            "where I can contribute, learn, and grow.  "
+                                            "\n💻 Proficient in web development and mobile applications, particularly with Flutter, I am eager to apply my knowledge in a real-world setting."
+                                            "\n🤝 Open to collaboration and always ready to lend a helping hand. Let's build something incredible together!",
                                         style: TextStyle(
                                           color: Colors.grey,
                                           fontSize: 16.0,
@@ -292,7 +312,7 @@ class _HomePageState extends State<HomePage> {
                                     height: size.height * .12,
                                   ),
 
-                                  //get in tuch text
+                                  //get in touch text
                                   InkWell(
                                     onTap: () {
                                       method.launchEmail();
