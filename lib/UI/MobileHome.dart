@@ -252,33 +252,27 @@ class _MobileHomeState extends State<MobileHome> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  technology(context, "Dart"),
-                                  technology(context, "Flutter"),
-                                  technology(context, "Firebase"),
-                                  technology(context, "UI/UX"),
-                                  technology(context, "API"),
-                                  technology(context, "NodeJs"),
-                                ],
-                              ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                technology(context, "Dart"),
+                                technology(context, "Flutter"),
+                                technology(context, "Firebase"),
+                                technology(context, "UI/UX"),
+                                technology(context, "API"),
+                                technology(context, "NodeJs"),
+                              ],
                             ),
-                            SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  technology(context, "Java, C/C++."),
-                                  technology(context, "Data Structures and Algorithms"),
-                                  technology(context, "MYSQL"),
-                                  technology(context, "Git - Github"),
-                                  technology(context, "Python"),
-                                  technology(context, "Machine Learning"),
-                                ],
-                              ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                technology(context, "Java, C/C++."),
+                                technology(context, "DSA"),
+                                technology(context, "MYSQL"),
+                                technology(context, "Git - Github"),
+                                technology(context, "Python"),
+                                technology(context, "Machine Learning"),
+                              ],
                             ),
                           ],
                         ),
@@ -318,7 +312,7 @@ class _MobileHomeState extends State<MobileHome> {
                         width: size.width * 0.6,
                         child: Image(
                           fit: BoxFit.cover,
-                          image: AssetImage("images/pic1.jpeg"),
+                          image: AssetImage("assets/images/pic1.jpeg"),
                         ),
                       ),
                       Container(
@@ -362,11 +356,6 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileWork(),
-
-              SizedBox(
-                height: size.height * 0.07,
-              ),
-
               //Some Things I've Built title
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -403,7 +392,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic9.jpg",
+                image: "assets/images/pic9.jpg",
               ),
 
               SizedBox(
@@ -412,7 +401,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic2.jpg",
+                image: "assets/images/pic2.jpg",
               ),
 
               SizedBox(
@@ -421,7 +410,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic3.png",
+                image: "assets/images/pic3.png",
               ),
 
               SizedBox(
@@ -430,7 +419,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic4.jpg",
+                image: "assets/images/pic4.jpg",
               ),
 
               SizedBox(
@@ -439,7 +428,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic5.jpg",
+                image: "assets/images/pic5.jpg",
               ),
 
               SizedBox(
@@ -448,7 +437,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic6.jpg",
+                image: "assets/images/pic6.jpg",
               ),
 
               SizedBox(
@@ -457,7 +446,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic7.jpg",
+                image: "assets/images/pic7.jpg",
               ),
 
               SizedBox(
@@ -466,7 +455,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic8.jpg",
+                image: "assets/images/pic8.jpg",
               ),
 
               SizedBox(
@@ -475,7 +464,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic10.jpg",
+                image: "assets/images/pic10.jpg",
               ),
 
               SizedBox(
@@ -484,7 +473,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic11.jpg",
+                image: "assets/images/pic11.jpg",
               ),
 
               SizedBox(
@@ -493,7 +482,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic102.gif",
+                image: "assets/images/pic102.gif",
               ),
 
               SizedBox(
@@ -502,7 +491,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic104.png",
+                image: "assets/images/pic104.png",
               ),
 
               SizedBox(
@@ -511,7 +500,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic105.png",
+                image: "assets/images/pic105.png",
               ),
 
               SizedBox(
@@ -520,7 +509,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic106.png",
+                image: "assets/images/pic106.png",
               ),
 
               SizedBox(
@@ -529,7 +518,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic107.jfif",
+                image: "assets/images/pic107.jfif",
               ),
 
               SizedBox(
@@ -538,7 +527,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic108.jfif",
+                image: "assets/images/pic108.jfif",
               ),
 
               SizedBox(
@@ -547,7 +536,7 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic109.jfif",
+                image: "assets/images/pic109.jfif",
               ),
 
               SizedBox(
@@ -556,11 +545,11 @@ class _MobileHomeState extends State<MobileHome> {
 
               MobileProject(
                 ontab: () {},
-                image: "images/pic110.jfif",
+                image: "assets/images/pic110.jfif",
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.01,
               ),
 
               Row(
@@ -569,22 +558,22 @@ class _MobileHomeState extends State<MobileHome> {
                     width: size.width * 0.42,
                     height: size.height * 0.6,
                     child: Image(
-                      image: AssetImage("images/pic101.png"),
+                      image: AssetImage("assets/images/pic101.png"),
                     ),
                   ),
                   Spacer(),
                   Container(
                     width: size.width * 0.42,
-                    height: size.height * 0.6,
+                    height: size.height * 0.3,
                     child: Image(
-                      image: AssetImage("images/pic103.png"),
+                      image: AssetImage("assets/images/pic103.png"),
                     ),
                   ),
                 ],
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.01,
               ),
 
               Row(
@@ -593,22 +582,22 @@ class _MobileHomeState extends State<MobileHome> {
                     width: size.width * 0.44,
                     height: size.height * 0.6,
                     child: Image(
-                      image: AssetImage("images/pic111.gif"),
+                      image: AssetImage("assets/images/pic111.gif"),
                     ),
                   ),
                   Spacer(),
                   Container(
                     width: size.width * 0.44,
-                    height: size.height * 0.6,
+                    height: size.height * 0.5,
                     child: Image(
-                      image: AssetImage("images/pic113.jfif"),
+                      image: AssetImage("assets/images/pic113.jfif"),
                     ),
                   ),
                 ],
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.01,
               ),
 
               Row(
@@ -617,22 +606,22 @@ class _MobileHomeState extends State<MobileHome> {
                     width: size.width * 0.44,
                     height: size.height * 0.6,
                     child: Image(
-                      image: AssetImage("images/pic114.png"),
+                      image: AssetImage("assets/images/pic114.png"),
                     ),
                   ),
                   Spacer(),
                   Container(
                     width: size.width * 0.44,
-                    height: size.height * 0.6,
+                    height: size.height * 0.5,
                     child: Image(
-                      image: AssetImage("images/pic115.png"),
+                      image: AssetImage("assets/images/pic115.png"),
                     ),
                   ),
                 ],
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.01,
               ),
 
               Row(
@@ -641,22 +630,22 @@ class _MobileHomeState extends State<MobileHome> {
                     width: size.width * 0.44,
                     height: size.height * 0.6,
                     child: Image(
-                      image: AssetImage("images/pic116.jfif"),
+                      image: AssetImage("assets/images/pic116.jfif"),
                     ),
                   ),
                   Spacer(),
                   Container(
                     width: size.width * 0.44,
-                    height: size.height * 0.6,
+                    height: size.height * 0.5,
                     child: Image(
-                      image: AssetImage("images/pic117.png"),
+                      image: AssetImage("assets/images/pic117.png"),
                     ),
                   ),
                 ],
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.01,
               ),
 
               Row(
@@ -665,22 +654,22 @@ class _MobileHomeState extends State<MobileHome> {
                     width: size.width * 0.44,
                     height: size.height * 0.6,
                     child: Image(
-                      image: AssetImage("images/pic118.jpeg"),
+                      image: AssetImage("assets/images/pic118.jpeg"),
                     ),
                   ),
                   Spacer(),
                   Container(
                     width: size.width * 0.44,
-                    height: size.height * 0.6,
+                    height: size.height * 0.5,
                     child: Image(
-                      image: AssetImage("images/pic119.jpeg"),
+                      image: AssetImage("assets/images/pic119.jpeg"),
                     ),
                   ),
                 ],
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.01,
               ),
 
               Row(
@@ -689,22 +678,22 @@ class _MobileHomeState extends State<MobileHome> {
                     width: size.width * 0.44,
                     height: size.height * 0.6,
                     child: Image(
-                      image: AssetImage("images/pic120.png"),
+                      image: AssetImage("assets/images/pic120.png"),
                     ),
                   ),
                   Spacer(),
                   Container(
                     width: size.width * 0.44,
-                    height: size.height * 0.6,
+                    height: size.height * 0.5,
                     child: Image(
-                      image: AssetImage("images/pic121.png"),
+                      image: AssetImage("assets/images/pic121.png"),
                     ),
                   ),
                 ],
               ),
 
               SizedBox(
-                height: size.height * 0.07,
+                height: size.height * 0.01,
               ),
 
               FittedBox(

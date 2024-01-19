@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:myportfolio/Widget/work_custom_data.dart';
 
 class MobileWork extends StatefulWidget {
   @override
@@ -18,7 +19,7 @@ class _MobileWorkState extends State<MobileWork> {
       child: Column(
         children: [
           SizedBox(
-            height: size.height * 0.07,
+            height: size.height * 0.02,
           ),
           Row(
             children: [
@@ -39,6 +40,7 @@ class _MobileWorkState extends State<MobileWork> {
                           ),
                         ),
                         Container(
+                          height: size.height * 1.4,
                           child: Center(
                               child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -69,12 +71,56 @@ class _MobileWorkState extends State<MobileWork> {
                       ],
                     )),
               ),
+
               Expanded(
-                  flex: 4,
+                  flex: 3,
                   child: Container(
-                    height: size.height * 1.7,
-                    child: MobileWork(),
-                  ))
+                    height: size.height * 1.4,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 60),
+                          child: WorkCustomData(
+                            title: "Indian Institute of Information Technology, Vadodara",
+                            subTitle:
+                            "I am currently pursuing Bachelor's Degree in Computer Science and Engineering \nat IIITV",
+                            duration: "2022 - Present",
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 60),
+                          child: WorkCustomData(
+                            title: "Flutter + Dart Development Project",
+                            subTitle:
+                            "Worked on group project on Expense Tracker App named BudgetBuddy.",
+                            duration: "Sept - 2023 to Jan - 2024",
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 60),
+                          child: WorkCustomData(
+                            title:
+                            "Senior Seconadary Education",
+                            subTitle:
+                            "Scored 94.6% in Senior Secondary Eductaion at school Avadh Collegiate.",
+                            duration: "Oct - 2019 to Nov - 2020",
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 80),
+                          child: WorkCustomData(
+                            title: "Seconadary Education",
+                            subTitle:
+                            "Scored 95.6% in Senior Secondary Eductaion at school Avadh Collegiate.",
+                            duration: "Sep 2020 - Oct 2020",
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+              )
             ],
           )
         ],
