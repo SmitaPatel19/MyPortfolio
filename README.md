@@ -2,6 +2,13 @@
 
 A new Flutter project.
 
+Portfolio Website | Flutter Web, Dart, Android Studio Github Link 
+• A responsive personal portfolio showcasing capability in AI technologies using Flutter for web development.
+• A Website emphasizing functions such as design implementation, responsiveness.
+• Currently working on this website and learning to build websites using Flutter.
+• It is a website that functions on the web and will be made responsive for other devices, such as Android, iOS, and
+desktop.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
