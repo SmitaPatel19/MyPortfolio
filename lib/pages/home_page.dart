@@ -3,10 +3,10 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mynewportfolio/pages/about_page.dart';
 import 'package:mynewportfolio/pages/work.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-
 import '../model/methods.dart';
 import '../os_images.dart';
 import '../widgets/app_bar_title.dart';
+import '../widgets/custom_hover.dart';
 import '../widgets/custom_text.dart';
 import '../widgets/main_title.dart';
 import 'feature_projects.dart';
@@ -42,12 +42,12 @@ class _HomePageState extends State<HomePage> {
               ? isExpaned != false
                   ? setState(() {
                     isExpaned = false;
-                    print('setState is called');
+                    // print('setState is called');
                   })
                   : {}
               : isExpaned != true
               ? setState(() {
-                print('setState is called');
+                // print('setState is called');
                 isExpaned = true;
               })
               : {},
@@ -91,14 +91,6 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Row(
                   children: [
-                    IconButton(
-                      icon: Icon(
-                        Icons.navigation_rounded,
-                        size: 32.0,
-                        color: Color(0xff64FFDA),
-                      ),
-                      onPressed: () {},
-                    ),
                     Spacer(),
                     Expanded(
                       child: Padding(
@@ -140,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                           child: TextButton(
                             onPressed: () {
                               method.launchURL(
-                                "https://drive.google.com/file/d/1heL9WIpCgP-4_7N8qlMp-iJNV6-mc8zf/view?usp=sharings",
+                                "https://drive.google.com/file/d/12Vk140w4TArAKgdQ4Kkv_frdIYkrwJrl/view?usp=drive_link",
                               );
                             },
                             child: Padding(
@@ -150,6 +142,7 @@ class _HomePageState extends State<HomePage> {
                               child: Text(
                                 "Resume",
                                 style: TextStyle(color: Color(0xff64FFDA)),
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                           ),
@@ -170,69 +163,87 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      IconButton(
-                        icon: FaIcon(FontAwesomeIcons.github),
-                        color: Color(0xffffa8b2d1),
-                        iconSize: 16.0,
-                        onPressed: () {
-                          method.launchURL("https://github.com/SmitaPatel19");
-                        },
+                      CustomTooltip(
+                        message: 'Github',
+                        child: IconButton(
+                          icon: FaIcon(FontAwesomeIcons.github),
+                          color: Color(0xffffa8b2d1),
+                          iconSize: 16.0,
+                          onPressed: () {
+                            method.launchURL("https://github.com/SmitaPatel19");
+                          },
+                        ),
                       ),
 
-                      IconButton(
-                        icon: Image.asset(
-                          "assets/images/leetcode.png",
-                          width: 16,
-                          height: 16,
+                      CustomTooltip(
+                        message: 'Leetcode',
+                        child: IconButton(
+                          icon: Image.asset(
+                            "images/leetcode.png",
+                            width: 16,
+                            height: 16,
+                            color: Color(0xffffa8b2d1),
+                          ),
                           color: Color(0xffffa8b2d1),
+                          iconSize: 16.0,
+                          onPressed: () {
+                            method.launchURL("https://leetcode.com/SmitaPatel/");
+                          },
                         ),
-                        color: Color(0xffffa8b2d1),
-                        iconSize: 16.0,
-                        onPressed: () {
-                          method.launchURL("https://leetcode.com/SmitaPatel/");
-                        },
                       ),
 
-                      IconButton(
-                        icon: Image.asset(
-                          "assets/images/codechef.png",
-                          width: 16,
-                          height: 16,
+                      CustomTooltip(
+                        message: 'Codechef',
+                        child: IconButton(
+                          icon: Image.asset(
+                            "images/codechef.png",
+                            width: 16,
+                            height: 16,
+                            color: Color(0xffffa8b2d1),
+                          ),
                           color: Color(0xffffa8b2d1),
+                          iconSize: 16.0,
+                          onPressed: () {
+                            method.launchURL(
+                              "https://www.codechef.com/users/smitapatel19",
+                            );
+                          },
                         ),
-                        color: Color(0xffffa8b2d1),
-                        iconSize: 16.0,
-                        onPressed: () {
-                          method.launchURL(
-                            "https://www.codechef.com/users/smitapatel19",
-                          );
-                        },
                       ),
-                      IconButton(
-                        icon: FaIcon(FontAwesomeIcons.linkedin),
-                        color: Color(0xffffa8b2d1),
-                        onPressed: () {
-                          method.launchURL(
-                            "https://www.linkedin.com/in/smita-patel-740162289/",
-                          );
-                        },
-                        iconSize: 16.0,
+                      CustomTooltip(
+                        message: 'LinkedIn',
+                        child: IconButton(
+                          icon: FaIcon(FontAwesomeIcons.linkedin),
+                          color: Color(0xffffa8b2d1),
+                          onPressed: () {
+                            method.launchURL(
+                              "https://www.linkedin.com/in/smita-patel-740162289/",
+                            );
+                          },
+                          iconSize: 16.0,
+                        ),
                       ),
-                      IconButton(
-                        icon: Icon(Icons.call),
-                        color: Color(0xffffa8b2d1),
-                        iconSize: 16.0,
-                        onPressed: () {
-                          method.launchCaller();
-                        },
+                      CustomTooltip(
+                        message: 'Call',
+                        child: IconButton(
+                          icon: Icon(FontAwesomeIcons.phone),
+                          color: Color(0xffffa8b2d1),
+                          iconSize: 16.0,
+                          onPressed: () {
+                            method.launchCaller();
+                          },
+                        ),
                       ),
-                      IconButton(
-                        icon: Icon(Icons.mail),
-                        color: Color(0xffffa8b2d1),
-                        iconSize: 16.0,
-                        onPressed: () {
-                          method.launchEmail();
-                        },
+                      CustomTooltip(
+                        message: 'E-mail',
+                        child: IconButton(
+                          icon: Icon(FontAwesomeIcons.envelope),
+                          color: Color(0xffffa8b2d1),
+                          iconSize: 16.0,
+                          onPressed: () {
+                            method.launchEmail();
+                          },
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 16.0),
@@ -260,7 +271,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   SizedBox(height: size.height * .06),
                                   CustomText(
-                                    text: "Hi, my name is",
+                                    text: "👋 Hey there, I'm",
                                     textsize: 16.0,
                                     color: Color(0xff41FBDA),
                                     letterSpacing: 3.0,
@@ -275,7 +286,7 @@ class _HomePageState extends State<HomePage> {
                                   SizedBox(height: 4.0),
                                   CustomText(
                                     text:
-                                        "I build things for the Android and web.",
+                                        "I design and build mobile and web experiences using Flutter.",
                                     textsize: 56.0,
                                     color: Color(0xffCCD6F6).withOpacity(0.6),
                                     fontWeight: FontWeight.w700,
@@ -284,12 +295,11 @@ class _HomePageState extends State<HomePage> {
                                   Wrap(
                                     children: [
                                       Text(
-                                        "I'm a second-year student at the prestigious Indian Institute of Information Technology Vadodara."
-                                        " \nMy journey in the world of technology has equipped me with skills in crafting websites, developing applications using Flutter, and navigating the intricacies of APIs."
-                                        " \n🚀 I am passionate about exploring the latest technologies, and I am currently on the lookout for an internship opportunity "
-                                        "where I can contribute, learn, and grow.  "
-                                        "\n💻 Proficient in web development and mobile applications, particularly with Flutter, I am eager to apply my knowledge in a real-world setting."
-                                        "\n🤝 Open to collaboration and always ready to lend a helping hand. Let's build something incredible together!",
+                                        "I'm a third-year student at the prestigious Indian Institute of Information Technology Vadodara, passionate about technology and problem-solving."
+                                        "\n\n🚀 I am passionate about exploring the latest technologies, and I am currently on the lookout for an internship opportunity "
+                                        "where I can contribute, learn, and grow."
+                                        "\n🤝 Open to collaboration and always ready to lend a helping hand. Let's build something incredible together!"
+                                        "\n\n💡 What drives me? \n 1. A love for learning and building. \n 2. Clean code and meaningful user experiences. \n 3. The thrill of solving real-world problems with technology.",
                                         style: TextStyle(
                                           color: Colors.grey,
                                           fontSize: 16.0,
@@ -302,33 +312,38 @@ class _HomePageState extends State<HomePage> {
                                   SizedBox(height: size.height * .12),
 
                                   //get in touch text
-                                  InkWell(
-                                    onTap: () {
-                                      method.launchEmail();
-                                    },
-                                    hoverColor: Color(
-                                      0xff64FFDA,
-                                    ).withOpacity(0.2),
-                                    borderRadius: BorderRadius.circular(4.0),
-                                    child: Container(
-                                      alignment: Alignment.center,
-                                      height: size.height * 0.09,
-                                      width: size.width * 0.14,
-                                      decoration: BoxDecoration(
-                                        border: Border.all(
-                                          color: Color(0xff64FFDA),
+                                  CustomTooltip(
+                                    message: 'Send me an email!',
+                                    top: -70,
+                                    left: 50,
+                                    child: InkWell(
+                                      onTap: () {
+                                        method.launchEmail();
+                                      },
+                                      hoverColor: Color(
+                                        0xff64FFDA,
+                                      ).withOpacity(0.2),
+                                      borderRadius: BorderRadius.circular(4.0),
+                                      child: Container(
+                                        alignment: Alignment.center,
+                                        height: size.height * 0.09,
+                                        width: size.width * 0.14,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                            color: Color(0xff64FFDA),
+                                          ),
+                                          borderRadius: BorderRadius.circular(
+                                            4.0,
+                                          ),
                                         ),
-                                        borderRadius: BorderRadius.circular(
-                                          4.0,
-                                        ),
-                                      ),
-                                      child: Text(
-                                        "Get In Touch",
-                                        style: TextStyle(
-                                          color: Color(0xff64FFDA),
-                                          letterSpacing: 2.75,
-                                          wordSpacing: 1.0,
-                                          fontSize: 15.0,
+                                        child: Text(
+                                          "Get In Touch",
+                                          style: TextStyle(
+                                            color: Color(0xff64FFDA),
+                                            letterSpacing: 2.75,
+                                            wordSpacing: 1.0,
+                                            fontSize: 15.0,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -340,7 +355,7 @@ class _HomePageState extends State<HomePage> {
 
                               //About Me
                               _wrapScrollTag(index: 0, child: AboutPage()),
-                              SizedBox(height: size.height * 0.02),
+                              SizedBox(height: size.height * 0.10),
 
                               //Where I've Worked
                               _wrapScrollTag(index: 1, child: Work()),
@@ -353,112 +368,112 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     MainTiitle(
                                       number: "0.3",
-                                      text: "Some Things I've Built",
+                                      text: "Some Projects I've Built",
                                     ),
                                     SizedBox(height: size.height * 0.04),
                                     FeatureProject(
-                                      imagePath: "images/pic9.jpg",
+                                      imagePath: "images/whatsapp.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/My_Whatsapp",
                                         );
                                       },
                                       projectDesc:
-                                          "A Mobile app for both Android and IOS. View your Status, Chat, and call history. The purpose of this projcet is to Learn Flutter complex UI Design.",
-                                      projectTitle: "WhatsaApp UI Clone",
+                                          "A Mobile app for both Android and IOS. Login using your mobile number and view your Status, Chat, and call history. The purpose of this projcet is to Learn Flutter complex UI Design and Firebase services.",
+                                      projectTitle: "WhatsaApp Clone",
                                       tech1: "Flutter",
                                       tech2: "Dart",
-                                      tech3: "Flutter UI",
+                                      tech3: "Firebase",
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/pic106.png",
+                                      imagePath: "images/myAI.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/My-AI",
                                         );
                                       },
                                       projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                          "A smart Flutter app that uses voice commands to interact with ChatGPT for intelligent replies and DALL·E for AI-generated images. It offers seamless voice recognition, smart conversations, and creative visuals.",
                                       projectTitle: "My AI",
                                       tech1: "Dart",
                                       tech2: "Flutter",
-                                      tech3: "Flutter UI",
+                                      tech3: "Open AI",
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/pic105.png",
+                                      imagePath: "images/movieapp.jpg",
                                       ontab: () {
                                         method.launchURL(
-                                          "https://github.com/SmitaPatel19/chatting-App-1st",
+                                          "https://github.com/SmitaPatel19/Movie-App",
                                         );
                                       },
                                       projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "Sign up and Sign in",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Flutter UI",
+                                          "A stylish and responsive Flutter app to explore trending movies, top-rated films, and popular TV shows with search, favorites, and rich media support.",
+                                      projectTitle: "Movie App",
+                                      tech1: "Flutter & Dart",
+                                      tech2: "TMDb API",
+                                      tech3: "Shared Preferences",
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/pic2.jpg",
+                                      imagePath: "images/myfinance.jpg",
                                       ontab: () {
                                         method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
+                                          "https://github.com/SmitaPatel19/MyFinance_App",
                                         );
                                       },
                                       projectDesc:
-                                          "A blog application using Flutter and firebase, In this project implement Firebase CURD operation, User can add post as well see all the post.",
-                                      projectTitle: "Blog Application",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Firebase",
+                                          "A clean and efficient Flutter app to manage income, expenses, and financial goals. Features include local storage, visual insights, and Firebase login/signup with cloud sync(Firestore).",
+                                      projectTitle: "MyFinance App",
+                                      tech1: "Firebase",
+                                      tech2: "Hive",
+                                      tech3: "Provider",
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/pic3.png",
+                                      imagePath: "images/wallpaperapp.jpg",
                                       ontab: () {
                                         method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
+                                          "https://github.com/SmitaPatel19/Wallpaper_App_API",
                                         );
                                       },
                                       projectDesc:
-                                          "A Wallpaper application Using Pixel API, to show more than 5k+ images. User can Search any images, as well as Download and directly set Image as Wallpaper.",
-                                      projectTitle: "Wallpaper Hub",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "API",
+                                          "A visually rich Flutter Wallpaper application Using Pixel API, to show more than 5k+ images. User can browse, view fullscreen, and apply high-res wallpapers fetched from Pexels API.",
+                                      projectTitle: "Wallpaper App",
+                                      tech1: "Flutter & Dart",
+                                      tech2: "Pexels API",
+                                      tech3: "PhotoView",
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/pic4.jpg",
+                                      imagePath: "images/bmiapp.jpg",
                                       ontab: () {
                                         method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
+                                          "https://github.com/SmitaPatel19/BMI-App-2nd",
                                         );
                                       },
                                       projectDesc:
-                                          "A Flutter app to track Coronavirus outbreak, Current statistics of global total confirmed, deaths, recovered cases, Health news, coronavirus safety information and many more.",
-                                      projectTitle: "Covid19 Tracker",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "API",
+                                          "A clean and intuitive Flutter app to calculate, track, and visualize BMI with voice input and dark/light theme support.",
+                                      projectTitle: "BMI Tracker",
+                                      tech1: "Speech-to-Text",
+                                      tech2: "FL Chart",
+                                      tech3: "SharedPreferences",
                                     ),
                                     //ff
                                     FeatureProject(
-                                      imagePath: "images/pic5.jpg",
+                                      imagePath: "images/signuplogin.jpg",
                                       ontab: () {
                                         method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
+                                          "https://github.com/SmitaPatel19/login_firebase_auth_database",
                                         );
                                       },
                                       projectDesc:
-                                          "In this app you can predict the gender with the help of name and probability of that name.",
-                                      projectTitle: "Gender Predictor",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "API",
+                                          "A Flutter app demonstrating complete Firebase Authentication and Firestore CRUD functionality with a clean, responsive UI.",
+                                      projectTitle: "Firebase Auth & Firestore Integration",
+                                      tech1: "Flutter & Dart ",
+                                      tech2: "Firebase Auth",
+                                      tech3: "Cloud Firestore",
                                     ),
 
                                     FeatureProject(
@@ -477,287 +492,6 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/pic7.jpg",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "Flutter Wallpaper application using firebase as a backend with a cool animation, it show the all images that are store in firebase firestore.",
-                                      projectTitle: "Wallpaper App",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Firebase",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic8.jpg",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "Weather app. This weather app is one of best free weather apps with full features: Local weather, weather map (weather map service) and weather widgets. Widgets for Android: The weather radar widget free and clock widget weather with beautiful style.",
-                                      projectTitle: "Weather Application",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "API",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic10.jpg",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://pub.dev/packages/flutter_onboarding_screen",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "A flutter package which help developer in creating a onboarding screens of their app.",
-                                      projectTitle:
-                                          "Flutter Onboarding Screen Package",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Dart Package",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic11.jpg",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "To explore the flutter Neumorphic design",
-                                      projectTitle: "Neumorphic Design",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Flutter UI",
-                                    ),
-
-                                    MainTiitle(
-                                      number: "0.4",
-                                      text: "Open Source Project",
-                                    ),
-
-                                    SizedBox(height: size.height * 0.04),
-
-                                    //other Projects
-                                    Container(
-                                      height: size.height * 0.86,
-                                      width: size.width - 100,
-                                      child: Column(
-                                        children: [
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              OSImages(
-                                                image: "images/pic101.png",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic103.png",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic111.gif",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic113.jfif",
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(height: size.height * 0.04),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              CustomText(
-                                                text: "Payment Getway",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "Chat App",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "Spotify Clone",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "TODO App",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-
-                                    //other Projects
-                                    Container(
-                                      height: size.height * 0.86,
-                                      width: size.width - 100,
-                                      child: Column(
-                                        children: [
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              OSImages(
-                                                image: "images/pic114.png",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic115.png",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic116.jfif",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic117.png",
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(height: size.height * 0.04),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              CustomText(
-                                                text: "Spannish Audio",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "Drumpad",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "Currency Converter",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "Calculator",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-
-                                    //other Projects
-                                    Container(
-                                      height: size.height * 0.86,
-                                      width: size.width - 100,
-                                      child: Column(
-                                        children: [
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              OSImages(
-                                                image: "images/pic118.jpeg",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic119.jpeg",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic120.png",
-                                              ),
-                                              OSImages(
-                                                image: "images/pic121.png",
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(height: size.height * 0.04),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceAround,
-                                            children: [
-                                              CustomText(
-                                                text: "Prime Videos UI",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "Tic Tac Toe Game",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "Currency Converter UI",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                              CustomText(
-                                                text: "Love Calculator",
-                                                textsize: 16.0,
-                                                color: Colors.white.withOpacity(
-                                                  0.4,
-                                                ),
-                                                fontWeight: FontWeight.w700,
-                                                letterSpacing: 1.75,
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-
-                                    FeatureProject(
                                       imagePath: "images/pic102.gif",
                                       ontab: () {
                                         method.launchURL(
@@ -765,122 +499,97 @@ class _HomePageState extends State<HomePage> {
                                         );
                                       },
                                       projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
+                                      "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
                                       projectTitle: "SolMusic",
                                       tech1: "Dart",
                                       tech2: "Flutter",
                                       tech3: "Web",
                                     ),
 
-                                    FeatureProject(
-                                      imagePath: "images/pic104.png",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19/chatting-App-1st",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "Sign Up and Sign In",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Flutter UI",
-                                    ),
+                                    // MainTiitle(
+                                    //   number: "0.4",
+                                    //   text: "Other Projects",
+                                    // ),
+                                    //
+                                    // SizedBox(height: size.height * 0.04),
+                                    //
+                                    // //other Projects
+                                    // //if needed more then copy paste this container
+                                    // Container(
+                                    //   height: size.height * 0.86,
+                                    //   width: size.width - 100,
+                                    //   child: Column(
+                                    //     children: [
+                                    //       Row(
+                                    //         mainAxisAlignment:
+                                    //             MainAxisAlignment.spaceAround,
+                                    //         children: [
+                                    //           OSImages(
+                                    //             image: "images/pic101.png",
+                                    //           ),
+                                    //           OSImages(
+                                    //             image: "images/pic103.png",
+                                    //           ),
+                                    //           OSImages(
+                                    //             image: "images/pic111.gif",
+                                    //           ),
+                                    //           OSImages(
+                                    //             image: "images/pic113.jfif",
+                                    //           ),
+                                    //         ],
+                                    //       ),
+                                    //       SizedBox(height: size.height * 0.04),
+                                    //       Row(
+                                    //         mainAxisAlignment:
+                                    //             MainAxisAlignment.spaceAround,
+                                    //         children: [
+                                    //           CustomText(
+                                    //             text: "Payment Getway",
+                                    //             textsize: 16.0,
+                                    //             color: Colors.white.withOpacity(
+                                    //               0.4,
+                                    //             ),
+                                    //             fontWeight: FontWeight.w700,
+                                    //             letterSpacing: 1.75,
+                                    //           ),
+                                    //           CustomText(
+                                    //             text: "Chat App",
+                                    //             textsize: 16.0,
+                                    //             color: Colors.white.withOpacity(
+                                    //               0.4,
+                                    //             ),
+                                    //             fontWeight: FontWeight.w700,
+                                    //             letterSpacing: 1.75,
+                                    //           ),
+                                    //           CustomText(
+                                    //             text: "Spotify Clone",
+                                    //             textsize: 16.0,
+                                    //             color: Colors.white.withOpacity(
+                                    //               0.4,
+                                    //             ),
+                                    //             fontWeight: FontWeight.w700,
+                                    //             letterSpacing: 1.75,
+                                    //           ),
+                                    //           CustomText(
+                                    //             text: "TODO App",
+                                    //             textsize: 16.0,
+                                    //             color: Colors.white.withOpacity(
+                                    //               0.4,
+                                    //             ),
+                                    //             fontWeight: FontWeight.w700,
+                                    //             letterSpacing: 1.75,
+                                    //           ),
+                                    //         ],
+                                    //       ),
+                                    //     ],
+                                    //   ),
+                                    // ),
 
-                                    FeatureProject(
-                                      imagePath: "images/pic107.jfif",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "Food delivery App",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Flutter UI",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic108.jfif",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "Plant Nursery App",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Flutter UI",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic109.jfif",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "Foody",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Flutter UI",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic110.jfif",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "Online Food order",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Flutter UI",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic501.png",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "Ganpati Bappa",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Flutter Animation",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic506.png",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                          "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "Flutter Netflix Web",
-                                      tech1: "Dart",
-                                      tech2: "Flutter Wen",
-                                      tech3: "Flutter UI",
-                                    ),
                                   ],
                                 ),
                               ),
 
-                              SizedBox(height: 6.0),
+                              // SizedBox(height: 6.0),
 
                               //Get In Touch
                               _wrapScrollTag(
@@ -927,43 +636,96 @@ class _HomePageState extends State<HomePage> {
                                             ],
                                           ),
                                           SizedBox(height: 32.0),
-                                          InkWell(
-                                            onTap: () {
-                                              method.launchEmail();
-                                            },
-                                            child: Card(
-                                              elevation: 4.0,
-                                              color: Color(0xff64FFDA),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(6.0),
-                                              ),
-                                              child: Container(
-                                                margin: EdgeInsets.all(0.85),
-                                                height: size.height * 0.09,
-                                                width: size.width * 0.10,
-                                                alignment: Alignment.center,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0xff0A192F),
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                        6.0,
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              CustomTooltip(
+                                                message: 'Send me an email!',
+                                                top: -70,
+                                                left: -20,
+                                                child: InkWell(
+                                                  onTap: () {
+                                                    method.launchEmail();
+                                                  },
+                                                  child: Card(
+                                                    elevation: 4.0,
+                                                    color: Color(0xff64FFDA),
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                          BorderRadius.circular(6.0),
+                                                    ),
+                                                    child: Container(
+                                                      margin: EdgeInsets.all(0.85),
+                                                      height: size.height * 0.09,
+                                                      width: size.width * 0.10,
+                                                      alignment: Alignment.center,
+                                                      decoration: BoxDecoration(
+                                                        color: Color(0xff0A192F),
+                                                        borderRadius:
+                                                            BorderRadius.circular(
+                                                              6.0,
+                                                            ),
                                                       ),
-                                                ),
-                                                child: Padding(
-                                                  padding:
-                                                      const EdgeInsets.symmetric(
-                                                        horizontal: 8.0,
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsets.symmetric(
+                                                              horizontal: 8.0,
+                                                            ),
+                                                        child: Text(
+                                                          "Say Hello",
+                                                          style: TextStyle(
+                                                            color: Color(0xff64FFDA),
+                                                          ),
+                                                        ),
                                                       ),
-                                                  child: Text(
-                                                    "Say Hello",
-                                                    style: TextStyle(
-                                                      color: Color(0xff64FFDA),
                                                     ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
+                                              SizedBox(width: 16.0),
+                                              CustomTooltip(
+                                                message: 'Call',
+                                                top: -70,
+                                                child: InkWell(
+                                                  onTap: () {
+                                                    method.launchCaller();
+                                                  },
+                                                  child: Card(
+                                                    elevation: 4.0,
+                                                    color: Color(0xff64FFDA),
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius:
+                                                      BorderRadius.circular(6.0),
+                                                    ),
+                                                    child: Container(
+                                                      margin: EdgeInsets.all(0.85),
+                                                      height: size.height * 0.09,
+                                                      width: size.width * 0.10,
+                                                      alignment: Alignment.center,
+                                                      decoration: BoxDecoration(
+                                                        color: Color(0xff0A192F),
+                                                        borderRadius:
+                                                        BorderRadius.circular(
+                                                          6.0,
+                                                        ),
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                        const EdgeInsets.symmetric(
+                                                          horizontal: 8.0,
+                                                        ),
+                                                        child: Text(
+                                                          "Call",
+                                                          style: TextStyle(
+                                                            color: Color(0xff64FFDA),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ],
                                       ),

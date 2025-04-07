@@ -11,16 +11,16 @@ class WorkBox extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         WorkCustomData(
+          title: "Flutter + Dart Development Project",
+          subTitle:
+          "Learned Flutter, Dart, REST APIs, Firebase, state management, and exploring backend services while building a complete mobile app.",
+          duration: "Sept - 2023 to Present",
+        ),
+        WorkCustomData(
           title: "Indian Institute of Information Technology, Vadodara",
           subTitle:
           "I am currently pursuing Bachelor's Degree in Computer Science and Engineering \nat IIITV",
           duration: "2022 - Present",
-        ),
-        WorkCustomData(
-          title: "Flutter + Dart Development Project",
-          subTitle:
-          "Worked on group project on Expense Tracker App named BudgetBuddy.",
-          duration: "Sept - 2023 to Jan - 2024",
         ),
         WorkCustomData(
           title:

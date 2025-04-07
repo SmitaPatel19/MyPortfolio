@@ -77,13 +77,13 @@ class _WorkState extends State<Work> {
                                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
                                   CircleAvatar(
-                                    backgroundColor: Colors.red,
-                                    child: FaIcon(FontAwesomeIcons.laptopCode,
+                                    backgroundColor: Colors.brown,
+                                    child: FaIcon(FontAwesomeIcons.dev,
                                         color: Colors.white),
                                   ),
                                   CircleAvatar(
-                                    backgroundColor: Colors.brown,
-                                    child: FaIcon(FontAwesomeIcons.dev,
+                                    backgroundColor: Colors.red,
+                                    child: FaIcon(FontAwesomeIcons.laptopCode,
                                         color: Colors.white),
                                   ),
                                   CircleAvatar(

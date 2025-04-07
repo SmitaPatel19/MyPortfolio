@@ -282,7 +282,7 @@ class _MobileHomeState extends State<MobileHome> {
                         width: size.width * 0.6,
                         child: Image(
                           fit: BoxFit.cover,
-                          image: AssetImage("assets/images/pic1.jpeg"),
+                          image: AssetImage("assets/images/myprofile.jpeg"),
                         ),
                       ),
                       Container(
@@ -350,23 +350,23 @@ class _MobileHomeState extends State<MobileHome> {
 
               SizedBox(height: size.height * 0.07),
 
-              MobileProject(ontab: () {}, image: "assets/images/pic9.jpg"),
+              MobileProject(ontab: () {}, image: "assets/images/whatsapp.jpg"),
 
               SizedBox(height: size.height * 0.07),
 
-              MobileProject(ontab: () {}, image: "assets/images/pic2.jpg"),
+              MobileProject(ontab: () {}, image: "assets/images/myfinance.jpg"),
 
               SizedBox(height: size.height * 0.07),
 
-              MobileProject(ontab: () {}, image: "assets/images/pic3.png"),
+              MobileProject(ontab: () {}, image: "assets/images/wallpaperapp.jpg"),
 
               SizedBox(height: size.height * 0.07),
 
-              MobileProject(ontab: () {}, image: "assets/images/pic4.jpg"),
+              MobileProject(ontab: () {}, image: "assets/images/bmiapp.jpg"),
 
               SizedBox(height: size.height * 0.07),
 
-              MobileProject(ontab: () {}, image: "assets/images/pic5.jpg"),
+              MobileProject(ontab: () {}, image: "assets/images/signuplogin.jpg"),
 
               SizedBox(height: size.height * 0.07),
 
@@ -398,11 +398,11 @@ class _MobileHomeState extends State<MobileHome> {
 
               SizedBox(height: size.height * 0.07),
 
-              MobileProject(ontab: () {}, image: "assets/images/pic105.png"),
+              MobileProject(ontab: () {}, image: "assets/images/movieapp.jpg"),
 
               SizedBox(height: size.height * 0.07),
 
-              MobileProject(ontab: () {}, image: "assets/images/pic106.png"),
+              MobileProject(ontab: () {}, image: "assets/images/myAI.jpg"),
 
               SizedBox(height: size.height * 0.07),
 

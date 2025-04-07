@@ -13,16 +13,20 @@ class AboutPage extends StatelessWidget {
           color: Color(0xff64FFDA).withOpacity(0.6),
           size: 14.0,
         ),
-        SizedBox(
-          width: MediaQuery.of(context).size.width * 0.01,
-        ),
-        Text(
-          text,
-          style: TextStyle(
-            color: Color(0xff717C99),
-            letterSpacing: 1.75,
+        SizedBox(width: MediaQuery.of(context).size.width * 0.01),
+        Container(
+          width: MediaQuery.of(context).size.width * 0.17,
+          height: 20,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Text(
+              text,
+              style: TextStyle(color: Color(0xff717C99), letterSpacing: 1.75),
+              overflow: TextOverflow.ellipsis,
+              softWrap: true,
+            ),
           ),
-        )
+        ),
       ],
     );
   }
@@ -32,7 +36,7 @@ class AboutPage extends StatelessWidget {
     var size = MediaQuery.of(context).size;
     return Container(
       height: size.height,
-      width:size.width - 100,
+      width: size.width - 100,
       child: Row(
         children: [
           //About me
@@ -51,18 +55,14 @@ class AboutPage extends StatelessWidget {
                       color: Color(0xff61F9D5),
                       fontWeight: FontWeight.w700,
                     ),
-                    SizedBox(
-                      width: 12.0,
-                    ),
+                    SizedBox(width: 12.0),
                     CustomText(
                       text: "About Me",
                       textsize: 26.0,
                       color: Color(0xffCCD6F6),
                       fontWeight: FontWeight.w700,
                     ),
-                    SizedBox(
-                      width: size.width * 0.01,
-                    ),
+                    SizedBox(width: size.width * 0.01),
                     Container(
                       width: size.width / 4.5,
                       height: 1.10,
@@ -71,30 +71,28 @@ class AboutPage extends StatelessWidget {
                   ],
                 ),
 
-                SizedBox(
-                  height: size.height * 0.07,
-                ),
+                SizedBox(height: size.height * 0.07),
 
                 //About me desc
                 Wrap(
                   children: [
                     CustomText(
                       text:
-                      "Hello! I'm Smita, a Student at IIITV.\n\nI enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.\n\n",
+                          "Hello! I’m Smita, a passionate developer and a student at IIITV.\nI love creating things for the web and mobile—whether it’s elegant websites, intuitive applications, or anything in between. My goal is to craft seamless, pixel-perfect experiences that are both beautiful and highly performant.\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       letterSpacing: 0.75,
                     ),
                     CustomText(
                       text:
-                      "Shortly currently, I am purshuing my Bachlor's degree in Computter science and Engineering at IIITV, as well as creating projects where I work on a wide variety of interesting and meaningful projects on a daily basis.\n\n",
+                          "Currently, I’m pursuing my Bachelor’s degree in Computer Science and Engineering at IIITV. Alongside academics, I spend time working on real-world projects, constantly challenging myself with new ideas and technologies.\nI am always curious to learn more, collaborate with like-minded people, and contribute to impactful products.\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       letterSpacing: 0.75,
                     ),
                     CustomText(
                       text:
-                      "Here are a few technologies I've been working with recently:\n\n",
+                          "Technologies I’ve been working with recently:\n",
                       textsize: 16.0,
                       color: Color(0xff828DAA),
                       // fontWeight: FontWeight.w500,
@@ -110,43 +108,79 @@ class AboutPage extends StatelessWidget {
                     children: [
                       Container(
                         width: size.width * 0.20,
-                        height: size.height * 0.25,
+                        height: size.height * 0.30,
                         child: SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
+                          scrollDirection: Axis.vertical,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
+                              CustomText(
+                                text: "Frontend & Mobile",
+                                textsize: 16.0,
+                                color: Color(0xff61F9D5),
+                                letterSpacing: 0.75,
+                              ),
                               technology(context, "Dart"),
                               technology(context, "Flutter"),
-                              technology(context, "Firebase"),
-                              technology(context, "UI/UX"),
-                              technology(context, "API"),
-                              technology(context, "NodeJs"),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: size.width * 0.20,
-                        height: size.height * 0.25,
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                              technology(context, "HTML/CSS"),
+
+                              SizedBox(height: 10,),
+                              CustomText(
+                                text: "Core and Programming",
+                                textsize: 16.0,
+                                color: Color(0xff61F9D5),
+                                letterSpacing: 0.75,
+                              ),
                               technology(context, "Java, C/C++."),
-                              technology(context, "Data Structures and Algorithms"),
-                              technology(context, "MYSQL"),
-                              technology(context, "Git - Github"),
+                              technology(
+                                context,
+                                "Data Structures and Algorithms",
+                              ),
                               technology(context, "Python"),
                               technology(context, "Machine Learning"),
                             ],
                           ),
                         ),
-                      )
+                      ),
+                      SizedBox(width: size.width*0.001,),
+                      SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
+                        child: Container(
+                          width: size.width * 0.20,
+                          height: size.height * 0.25,
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                CustomText(
+                                  text: "Backend & database",
+                                  textsize: 16.0,
+                                  color: Color(0xff61F9D5),
+                                  letterSpacing: 0.75,
+                                ),
+                                technology(context, "Firebase/Firestore"),
+                                technology(context, "NodeJs(learning phase)"),
+                                technology(context, "API"),
+                                technology(context, "MYSQL"),
+
+                                SizedBox(height: 10,),
+                                CustomText(
+                                  text: "Tools",
+                                  textsize: 16.0,
+                                  color: Color(0xff61F9D5),
+                                  letterSpacing: 0.75,
+                                ),
+                                technology(context, "Git - Github"),
+                                technology(context, "VS Code/Android Studio"),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -173,7 +207,7 @@ class AboutPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  CustomImageAnimation()
+                  CustomImageAnimation(),
                 ],
               ),
             ),
@@ -234,7 +268,7 @@ class _CustomImageAnimationState extends State<CustomImageAnimation> {
             color: Colors.black54,
             child: Image(
               fit: BoxFit.cover,
-              image: AssetImage("images/pic1.jpeg"),
+              image: AssetImage("images/myprofile.jpeg"),
             ),
           ),
           Container(

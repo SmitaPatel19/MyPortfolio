@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mynewportfolio/widgets/custom_hover.dart';
 
 class FeatureProject extends StatelessWidget {
   final String imagePath;
@@ -101,43 +102,57 @@ class FeatureProject extends StatelessWidget {
                 Positioned(
                   top: size.height * 0.36,
                   right: 10.0,
-                  child: Container(
-                    height: size.height * 0.08,
-                    width: size.width * 0.25,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text( // Replace with Text or your CustomText widget
-                          tech1 == null ? "" : tech1,
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.grey,
-                            letterSpacing: 1.75,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Container(
+                      height: size.height * 0.08,
+                      width: size.width * 0.25,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Flexible(
+                            child: Text(
+                              tech1 == null ? "" : tech1,
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.grey,
+                                letterSpacing: 1.75,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              softWrap: true,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 16.0,
-                        ),
-                        Text( // Replace with Text or your CustomText widget
-                          tech2 == null ? "" : tech2,
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.grey,
-                            letterSpacing: 1.75,
+                          SizedBox(width: 16.0),
+                          Flexible(
+                            child: Text(
+                              tech2 == null ? "" : tech2,
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.grey,
+                                letterSpacing: 1.75,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              softWrap: true,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 16.0,
-                        ),
-                        Text( // Replace with Text or your CustomText widget
-                          tech3 == null ? "" : tech3,
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.grey,
-                            letterSpacing: 1.75,
+                          SizedBox(width: 16.0),
+                          Flexible(
+                            child: Text(
+                              tech3 == null ? "" : tech3,
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.grey,
+                                letterSpacing: 1.75,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              softWrap: true,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -150,10 +165,15 @@ class FeatureProject extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        IconButton(
-                          icon: FaIcon(FontAwesomeIcons.github),
-                          color: Colors.white.withOpacity(0.3),
-                          onPressed: ontab,
+                        CustomTooltip(
+                          message: 'Github Link',
+                          top: -30,
+                          left: -10,
+                          child: IconButton(
+                            icon: FaIcon(FontAwesomeIcons.github),
+                            color: Colors.white.withOpacity(0.3),
+                            onPressed: ontab,
+                          ),
                         ),
                       ],
                     ),
