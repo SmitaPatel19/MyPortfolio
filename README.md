@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to **MyPortfolio**! ✨ This is a **responsive personal portfolio website** built with **Flutter & Dart**, designed to showcase skills, projects, and experiences in an interactive and visually appealing way. It highlights capabilities in **AI technologies** while demonstrating **design implementation, responsiveness, and Flutter web development**.
+Welcome to **MyPortfolio**! ✨ This is a **responsive personal portfolio website** built with **Flutter & Dart**, designed to showcase skills, projects, and experiences in an interactive and visually appealing way. It highlights capabilities in **AI technologies** while demonstrating **design implementation, responsiveness, state management, and Flutter web development**.
 
 Currently, this project is a **work in progress**, as I continue learning and improving my web development skills with Flutter.
 
@@ -13,7 +13,11 @@ Currently, this project is a **work in progress**, as I continue learning and im
 **Experience Timeline** – A structured timeline of work and learning journey.  
 **Fully Responsive** – Optimized for **Web, Android, iOS, and Desktop**.  
 **Modern UI** – Designed with clean, professional, and interactive elements.  
-**Contact Form** – Let visitors reach out easily.
+**Contact Form** – Let visitors reach out easily.  
+**Theme Toggling** – Switch between Light and Dark modes dynamically.  
+**FontAwesome Icons** – Used for consistent, professional iconography.  
+**Image Zoom & Scroll** – Smooth zooming and scrollable images in both directions.  
+**State Management with Provider** – Efficient, scalable state management using Provider package.
 
 ---
 
@@ -67,6 +71,8 @@ The output will be in the `build/web` directory, ready to be deployed!
 📌 **View Projects** – Explore featured projects with details and links.  
 🛠 **Explore Skills** – Display key skills, including AI technologies.  
 📅 **Experience Timeline** – Track the work and learning journey.  
+🌗 **Toggle Themes** – Seamlessly switch between light and dark mode.  
+📸 **Zoom & Scroll Images** – Smooth interaction with image components.  
 📨 **Contact Form** – Let people connect easily.
 
 ---
