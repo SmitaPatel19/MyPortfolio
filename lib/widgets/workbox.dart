@@ -13,26 +13,25 @@ class WorkBox extends StatelessWidget {
         WorkCustomData(
           title: "Flutter + Dart Development Project",
           subTitle:
-          "Learned Flutter, Dart, REST APIs, Firebase, state management, and exploring backend services while building a complete mobile app.",
+              "Learned Flutter, Dart, REST APIs, Firebase, state management, and exploring backend services while building a complete mobile app.",
           duration: "Sept - 2023 to Present",
         ),
         WorkCustomData(
           title: "Indian Institute of Information Technology, Vadodara",
           subTitle:
-          "I am currently pursuing Bachelor's Degree in Computer Science and Engineering \nat IIITV",
+              "I am currently pursuing Bachelor's Degree in Computer Science and Engineering \nat IIITV",
           duration: "2022 - Present",
         ),
         WorkCustomData(
-          title:
-          "Senior Seconadary Education",
+          title: "Senior Seconadary Education",
           subTitle:
-          "Scored 94.6% in Senior Secondary Eductaion at school Avadh Collegiate.",
+              "Scored 94.6% in Senior Secondary Eductaion at school Avadh Collegiate.",
           duration: "Oct - 2019 to Nov - 2020",
         ),
         WorkCustomData(
           title: "Seconadary Education",
           subTitle:
-          "Scored 95.6% in Senior Secondary Eductaion at school Avadh Collegiate.",
+              "Scored 95.6% in Senior Secondary Eductaion at school Avadh Collegiate.",
           duration: "Sep 2020 - Oct 2020",
         ),
       ],

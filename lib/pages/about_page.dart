@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-
+import '../theme/app_theme.dart';
 import '../widgets/custom_text.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
 
+
   Widget technology(BuildContext context, String text) {
+    final colors = Theme.of(context).extension<AppColors>()!;
+
     return Row(
       children: [
         Icon(
           Icons.skip_next,
-          color: Color(0xff64FFDA).withOpacity(0.6),
+          color: colors.techIconColor.withOpacity(0.6),
           size: 14.0,
         ),
         SizedBox(width: MediaQuery.of(context).size.width * 0.01),
@@ -21,7 +24,7 @@ class AboutPage extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Text(
               text,
-              style: TextStyle(color: Color(0xff717C99), letterSpacing: 1.75),
+              style: TextStyle(color: colors.techtextColor, letterSpacing: 1.75),
               overflow: TextOverflow.ellipsis,
               softWrap: true,
             ),
@@ -34,6 +37,8 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    final colors = Theme.of(context).extension<AppColors>()!;
+
     return Container(
       height: size.height,
       width: size.width - 100,
@@ -52,21 +57,21 @@ class AboutPage extends StatelessWidget {
                     CustomText(
                       text: "01.",
                       textsize: 20.0,
-                      color: Color(0xff61F9D5),
+                      color: colors.sectionheadingNumColor,
                       fontWeight: FontWeight.w700,
                     ),
                     SizedBox(width: 12.0),
                     CustomText(
                       text: "About Me",
                       textsize: 26.0,
-                      color: Color(0xffCCD6F6),
+                      color: colors.sectionheadingColor,
                       fontWeight: FontWeight.w700,
                     ),
                     SizedBox(width: size.width * 0.01),
                     Container(
                       width: size.width / 4.5,
                       height: 1.10,
-                      color: Color(0xff303C55),
+                      color: colors.sectionheadinglineColor,
                     ),
                   ],
                 ),
@@ -80,21 +85,20 @@ class AboutPage extends StatelessWidget {
                       text:
                           "Hello! I’m Smita, a passionate developer and a student at IIITV.\nI love creating things for the web and mobile—whether it’s elegant websites, intuitive applications, or anything in between. My goal is to craft seamless, pixel-perfect experiences that are both beautiful and highly performant.\n",
                       textsize: 16.0,
-                      color: Color(0xff828DAA),
+                      color: colors.smalltextColor,
                       letterSpacing: 0.75,
                     ),
                     CustomText(
                       text:
                           "Currently, I’m pursuing my Bachelor’s degree in Computer Science and Engineering at IIITV. Alongside academics, I spend time working on real-world projects, constantly challenging myself with new ideas and technologies.\nI am always curious to learn more, collaborate with like-minded people, and contribute to impactful products.\n",
                       textsize: 16.0,
-                      color: Color(0xff828DAA),
+                      color: colors.smalltextColor,
                       letterSpacing: 0.75,
                     ),
                     CustomText(
-                      text:
-                          "Technologies I’ve been working with recently:\n",
+                      text: "Technologies I’ve been working with recently:\n",
                       textsize: 16.0,
-                      color: Color(0xff828DAA),
+                      color: colors.smalltextColor,
                       // fontWeight: FontWeight.w500,
                       letterSpacing: 0.75,
                     ),
@@ -117,18 +121,18 @@ class AboutPage extends StatelessWidget {
                               CustomText(
                                 text: "Frontend & Mobile",
                                 textsize: 16.0,
-                                color: Color(0xff61F9D5),
+                                color: colors.sectionheadingNumColor,
                                 letterSpacing: 0.75,
                               ),
                               technology(context, "Dart"),
                               technology(context, "Flutter"),
                               technology(context, "HTML/CSS"),
 
-                              SizedBox(height: 10,),
+                              SizedBox(height: 10),
                               CustomText(
                                 text: "Core and Programming",
                                 textsize: 16.0,
-                                color: Color(0xff61F9D5),
+                                color: colors.sectionheadingNumColor,
                                 letterSpacing: 0.75,
                               ),
                               technology(context, "Java, C/C++."),
@@ -142,7 +146,7 @@ class AboutPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: size.width*0.001,),
+                      SizedBox(width: size.width * 0.001),
                       SingleChildScrollView(
                         scrollDirection: Axis.vertical,
                         child: Container(
@@ -156,7 +160,7 @@ class AboutPage extends StatelessWidget {
                                 CustomText(
                                   text: "Backend & database",
                                   textsize: 16.0,
-                                  color: Color(0xff61F9D5),
+                                  color: colors.sectionheadingNumColor,
                                   letterSpacing: 0.75,
                                 ),
                                 technology(context, "Firebase/Firestore"),
@@ -164,11 +168,11 @@ class AboutPage extends StatelessWidget {
                                 technology(context, "API"),
                                 technology(context, "MYSQL"),
 
-                                SizedBox(height: 10,),
+                                SizedBox(height: 10),
                                 CustomText(
                                   text: "Tools",
                                   textsize: 16.0,
-                                  color: Color(0xff61F9D5),
+                                  color: colors.sectionheadingNumColor,
                                   letterSpacing: 0.75,
                                 ),
                                 technology(context, "Git - Github"),
@@ -190,7 +194,6 @@ class AboutPage extends StatelessWidget {
             child: Container(
               height: size.height / 1.5,
               width: size.width / 2 - 100,
-              // color: Colors.white,
               child: Stack(
                 alignment: Alignment.center,
                 children: [
@@ -198,12 +201,12 @@ class AboutPage extends StatelessWidget {
                     top: size.height * 0.12,
                     left: size.width * 0.120,
                     child: Card(
-                      color: Color(0xff61F9D5),
+                      color: colors.sectionheadingNumColor,
                       child: Container(
                         margin: EdgeInsets.all(2.75),
                         height: size.height / 2,
                         width: size.width / 5,
-                        color: Color(0xff0A192F),
+                        color: colors.backgroundColor,
                       ),
                     ),
                   ),
@@ -239,8 +242,9 @@ class _CustomImageAnimationState extends State<CustomImageAnimation> {
   }
 
   void _incrementExit(PointerEvent details) {
+    final colors = Theme.of(context).extension<AppColors>()!;
     setState(() {
-      customImageColor = Color(0xff61F9D5).withOpacity(0.5);
+      customImageColor = colors.sectionheadingNumColor.withOpacity(0.5);
       _exitCounter++;
     });
   }

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mynewportfolio/pages/about_page.dart';
-import 'package:mynewportfolio/pages/work.dart';
+import 'package:mynewportfolio/pages/work_page.dart';
+import 'package:provider/provider.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import '../model/methods.dart';
-import '../os_images.dart';
+import '../theme/app_theme.dart';
+import '../theme/theme_provider.dart';
 import '../widgets/app_bar_title.dart';
 import '../widgets/custom_hover.dart';
 import '../widgets/custom_text.dart';
-import '../widgets/main_title.dart';
-import 'feature_projects.dart';
+import '../widgets/feature_projects.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -74,9 +75,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Provider.of<ThemeProvider>(context).isDarkMode;
+    final colors = Theme.of(context).extension<AppColors>()!;
+
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xff0A192F),
+      backgroundColor: colors.backgroundColor,
       body: SingleChildScrollView(
         physics: ScrollPhysics(),
         primary: true,
@@ -91,6 +95,13 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Row(
                   children: [
+                    IconButton(
+                      icon: FaIcon(isDark ? FontAwesomeIcons.sun : FontAwesomeIcons.moon),
+                      onPressed: () {
+                        Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+                      },
+                    ),
+
                     Spacer(),
                     Expanded(
                       child: Padding(
@@ -106,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                               Tab(child: AppBarTitle(text: 'About')),
                               Tab(child: AppBarTitle(text: 'Experience')),
                               Tab(child: AppBarTitle(text: 'Project')),
-                              Tab(child: AppBarTitle(text: 'Contact Us')),
+                              Tab(child: AppBarTitle(text: 'Contact Me')),
                             ],
                           ),
                         ),
@@ -116,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.symmetric(vertical: 16.0),
                       child: Card(
                         elevation: 4.0,
-                        color: Color(0xff64FFDA),
+                        color: colors.techIconColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(6.0),
                         ),
@@ -126,13 +137,13 @@ class _HomePageState extends State<HomePage> {
                           width: size.height * 0.20,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
-                            color: Color(0xff0A192F),
+                            color: colors.backgroundColor,
                             borderRadius: BorderRadius.circular(6.0),
                           ),
                           child: TextButton(
                             onPressed: () {
                               method.launchURL(
-                                "https://drive.google.com/file/d/12Vk140w4TArAKgdQ4Kkv_frdIYkrwJrl/view?usp=drive_link",
+                                "https://drive.google.com/file/d/134sxdZPaiopZlKmG94e9FqBMp_JeJkcm/view?usp=sharing",
                               );
                             },
                             child: Padding(
@@ -141,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               child: Text(
                                 "Resume",
-                                style: TextStyle(color: Color(0xff64FFDA)),
+                                style: TextStyle(color: colors.techIconColor),
                                 overflow: TextOverflow.ellipsis,
                               ),
                             ),
@@ -167,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                         message: 'Github',
                         child: IconButton(
                           icon: FaIcon(FontAwesomeIcons.github),
-                          color: Color(0xffffa8b2d1),
+                          color: colors.sideIconColor,
                           iconSize: 16.0,
                           onPressed: () {
                             method.launchURL("https://github.com/SmitaPatel19");
@@ -182,12 +193,14 @@ class _HomePageState extends State<HomePage> {
                             "images/leetcode.png",
                             width: 16,
                             height: 16,
-                            color: Color(0xffffa8b2d1),
+                            color: colors.sideIconColor,
                           ),
-                          color: Color(0xffffa8b2d1),
+                          color: colors.sideIconColor,
                           iconSize: 16.0,
                           onPressed: () {
-                            method.launchURL("https://leetcode.com/SmitaPatel/");
+                            method.launchURL(
+                              "https://leetcode.com/SmitaPatel/",
+                            );
                           },
                         ),
                       ),
@@ -199,9 +212,9 @@ class _HomePageState extends State<HomePage> {
                             "images/codechef.png",
                             width: 16,
                             height: 16,
-                            color: Color(0xffffa8b2d1),
+                            color: colors.sideIconColor,
                           ),
-                          color: Color(0xffffa8b2d1),
+                          color: colors.sideIconColor,
                           iconSize: 16.0,
                           onPressed: () {
                             method.launchURL(
@@ -214,7 +227,7 @@ class _HomePageState extends State<HomePage> {
                         message: 'LinkedIn',
                         child: IconButton(
                           icon: FaIcon(FontAwesomeIcons.linkedin),
-                          color: Color(0xffffa8b2d1),
+                          color: colors.sideIconColor,
                           onPressed: () {
                             method.launchURL(
                               "https://www.linkedin.com/in/smita-patel-740162289/",
@@ -227,7 +240,7 @@ class _HomePageState extends State<HomePage> {
                         message: 'Call',
                         child: IconButton(
                           icon: Icon(FontAwesomeIcons.phone),
-                          color: Color(0xffffa8b2d1),
+                          color: colors.sideIconColor,
                           iconSize: 16.0,
                           onPressed: () {
                             method.launchCaller();
@@ -238,7 +251,7 @@ class _HomePageState extends State<HomePage> {
                         message: 'E-mail',
                         child: IconButton(
                           icon: Icon(FontAwesomeIcons.envelope),
-                          color: Color(0xffffa8b2d1),
+                          color: colors.sideIconColor,
                           iconSize: 16.0,
                           onPressed: () {
                             method.launchEmail();
@@ -250,7 +263,7 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           height: size.height * 0.20,
                           width: 2,
-                          color: Colors.grey.withOpacity(0.4),
+                          color: colors.sideLineColor.withOpacity(0.4),
                         ),
                       ),
                     ],
@@ -273,14 +286,14 @@ class _HomePageState extends State<HomePage> {
                                   CustomText(
                                     text: "👋 Hey there, I'm",
                                     textsize: 16.0,
-                                    color: Color(0xff41FBDA),
+                                    color: colors.highliteTextColor,
                                     letterSpacing: 3.0,
                                   ),
                                   SizedBox(height: 6.0),
                                   CustomText(
                                     text: "Smita Patel.",
                                     textsize: 68.0,
-                                    color: Color(0xffCCD6F6),
+                                    color: colors.sectionheadingColor,
                                     fontWeight: FontWeight.w900,
                                   ),
                                   SizedBox(height: 4.0),
@@ -288,7 +301,7 @@ class _HomePageState extends State<HomePage> {
                                     text:
                                         "I design and build mobile and web experiences using Flutter.",
                                     textsize: 56.0,
-                                    color: Color(0xffCCD6F6).withOpacity(0.6),
+                                    color: colors.sectionheadingColor.withOpacity(0.6),
                                     fontWeight: FontWeight.w700,
                                   ),
                                   SizedBox(height: size.height * .04),
@@ -301,9 +314,9 @@ class _HomePageState extends State<HomePage> {
                                         "\n🤝 Open to collaboration and always ready to lend a helping hand. Let's build something incredible together!"
                                         "\n\n💡 What drives me? \n 1. A love for learning and building. \n 2. Clean code and meaningful user experiences. \n 3. The thrill of solving real-world problems with technology.",
                                         style: TextStyle(
-                                          color: Colors.grey,
+                                          color: colors.smalltextColor,
                                           fontSize: 16.0,
-                                          letterSpacing: 2.75,
+                                          fontWeight: FontWeight.w500,
                                           wordSpacing: 0.75,
                                         ),
                                       ),
@@ -330,7 +343,7 @@ class _HomePageState extends State<HomePage> {
                                         width: size.width * 0.14,
                                         decoration: BoxDecoration(
                                           border: Border.all(
-                                            color: Color(0xff64FFDA),
+                                            color: colors.techIconColor,
                                           ),
                                           borderRadius: BorderRadius.circular(
                                             4.0,
@@ -339,7 +352,7 @@ class _HomePageState extends State<HomePage> {
                                         child: Text(
                                           "Get In Touch",
                                           style: TextStyle(
-                                            color: Color(0xff64FFDA),
+                                            color: colors.techIconColor,
                                             letterSpacing: 2.75,
                                             wordSpacing: 1.0,
                                             fontSize: 15.0,
@@ -366,9 +379,29 @@ class _HomePageState extends State<HomePage> {
                                 index: 2,
                                 child: Column(
                                   children: [
-                                    MainTiitle(
-                                      number: "0.3",
-                                      text: "Some Projects I've Built",
+                                    Row(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        CustomText(
+                                          text: "03.",
+                                          textsize: 20.0,
+                                          color: colors.sectionheadingNumColor,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                        SizedBox(width: 12.0),
+                                        CustomText(
+                                          text: "Some Projects I've Built",
+                                          textsize: 26.0,
+                                          color: colors.sectionheadingColor,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                        SizedBox(width: size.width * 0.01),
+                                        Container(
+                                          width: size.width / 4,
+                                          height: 1.10,
+                                          color: colors.sectionheadinglineColor,
+                                        ),
+                                      ],
                                     ),
                                     SizedBox(height: size.height * 0.04),
                                     FeatureProject(
@@ -470,40 +503,26 @@ class _HomePageState extends State<HomePage> {
                                       },
                                       projectDesc:
                                           "A Flutter app demonstrating complete Firebase Authentication and Firestore CRUD functionality with a clean, responsive UI.",
-                                      projectTitle: "Firebase Auth & Firestore Integration",
+                                      projectTitle:
+                                          "Firebase Auth & Firestore Integration",
                                       tech1: "Flutter & Dart ",
                                       tech2: "Firebase Auth",
                                       tech3: "Cloud Firestore",
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/pic6.jpg",
+                                      imagePath: "images/news_app.gif",
                                       ontab: () {
                                         method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
+                                          "https://github.com/SmitaPatel19/NewsApp",
                                         );
                                       },
                                       projectDesc:
-                                          "complete news Application using rest API API link- https://newsapi.org, you can get all news.",
-                                      projectTitle: "News Hour",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "API",
-                                    ),
-
-                                    FeatureProject(
-                                      imagePath: "images/pic102.gif",
-                                      ontab: () {
-                                        method.launchURL(
-                                          "https://github.com/SmitaPatel19?tab=repositories",
-                                        );
-                                      },
-                                      projectDesc:
-                                      "A nicer look at your GitHub profile and repo stats. Includes data visualizations of your top languages, starred repositories, and sort through your top repos by number of stars, forks, and size.",
-                                      projectTitle: "SolMusic",
-                                      tech1: "Dart",
-                                      tech2: "Flutter",
-                                      tech3: "Web",
+                                          "A responsive Flutter app that fetches the latest news from a public API, with search, dark mode, pull-to-refresh, and in-app article preview using WebView.",
+                                      projectTitle: "News App",
+                                      tech1: "Flutter & Dart",
+                                      tech2: "Provider",
+                                      tech3: "http & WebView",
                                     ),
 
                                     // MainTiitle(
@@ -584,7 +603,6 @@ class _HomePageState extends State<HomePage> {
                                     //     ],
                                     //   ),
                                     // ),
-
                                   ],
                                 ),
                               ),
@@ -601,22 +619,21 @@ class _HomePageState extends State<HomePage> {
                                       width:
                                           MediaQuery.of(context).size.width -
                                           100,
-                                      // color: Colors.orange,
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
                                           CustomText(
-                                            text: "0.4 What's Next?",
+                                            text: "04. What's Next?",
                                             textsize: 16.0,
-                                            color: Color(0xff41FBDA),
+                                            color: colors.highliteTextColor,
                                             letterSpacing: 3.0,
                                           ),
                                           SizedBox(height: 16.0),
                                           CustomText(
                                             text: "Get In Touch",
                                             textsize: 42.0,
-                                            color: Colors.white,
+                                            color: colors.whiteColor,
                                             letterSpacing: 3.0,
                                             fontWeight: FontWeight.w700,
                                           ),
@@ -627,8 +644,7 @@ class _HomePageState extends State<HomePage> {
                                                 "Although I'm currently looking for internships opportunities, my inbox is \nalways open. Whether you have a question or just want to say hi, I'll try my \nbest to get back to you!",
                                                 textAlign: TextAlign.center,
                                                 style: TextStyle(
-                                                  color: Colors.white
-                                                      .withOpacity(0.4),
+                                                  color: colors.smalltextColor,
                                                   letterSpacing: 0.75,
                                                   fontSize: 17.0,
                                                 ),
@@ -637,7 +653,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           SizedBox(height: 32.0),
                                           Row(
-                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
                                             children: [
                                               CustomTooltip(
                                                 message: 'Send me an email!',
@@ -649,18 +666,24 @@ class _HomePageState extends State<HomePage> {
                                                   },
                                                   child: Card(
                                                     elevation: 4.0,
-                                                    color: Color(0xff64FFDA),
+                                                    color: colors.techIconColor,
                                                     shape: RoundedRectangleBorder(
                                                       borderRadius:
-                                                          BorderRadius.circular(6.0),
+                                                          BorderRadius.circular(
+                                                            6.0,
+                                                          ),
                                                     ),
                                                     child: Container(
-                                                      margin: EdgeInsets.all(0.85),
-                                                      height: size.height * 0.09,
+                                                      margin: EdgeInsets.all(
+                                                        0.85,
+                                                      ),
+                                                      height:
+                                                          size.height * 0.09,
                                                       width: size.width * 0.10,
-                                                      alignment: Alignment.center,
+                                                      alignment:
+                                                          Alignment.center,
                                                       decoration: BoxDecoration(
-                                                        color: Color(0xff0A192F),
+                                                        color: colors.backgroundColor,
                                                         borderRadius:
                                                             BorderRadius.circular(
                                                               6.0,
@@ -674,7 +697,7 @@ class _HomePageState extends State<HomePage> {
                                                         child: Text(
                                                           "Say Hello",
                                                           style: TextStyle(
-                                                            color: Color(0xff64FFDA),
+                                                            color: colors.techIconColor,
                                                           ),
                                                         ),
                                                       ),
@@ -692,32 +715,38 @@ class _HomePageState extends State<HomePage> {
                                                   },
                                                   child: Card(
                                                     elevation: 4.0,
-                                                    color: Color(0xff64FFDA),
+                                                    color: colors.techIconColor,
                                                     shape: RoundedRectangleBorder(
                                                       borderRadius:
-                                                      BorderRadius.circular(6.0),
+                                                          BorderRadius.circular(
+                                                            6.0,
+                                                          ),
                                                     ),
                                                     child: Container(
-                                                      margin: EdgeInsets.all(0.85),
-                                                      height: size.height * 0.09,
+                                                      margin: EdgeInsets.all(
+                                                        0.85,
+                                                      ),
+                                                      height:
+                                                          size.height * 0.09,
                                                       width: size.width * 0.10,
-                                                      alignment: Alignment.center,
+                                                      alignment:
+                                                          Alignment.center,
                                                       decoration: BoxDecoration(
-                                                        color: Color(0xff0A192F),
+                                                        color: colors.backgroundColor,
                                                         borderRadius:
-                                                        BorderRadius.circular(
-                                                          6.0,
-                                                        ),
+                                                            BorderRadius.circular(
+                                                              6.0,
+                                                            ),
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                        const EdgeInsets.symmetric(
-                                                          horizontal: 8.0,
-                                                        ),
+                                                            const EdgeInsets.symmetric(
+                                                              horizontal: 8.0,
+                                                            ),
                                                         child: Text(
                                                           "Call",
                                                           style: TextStyle(
-                                                            color: Color(0xff64FFDA),
+                                                            color: colors.techIconColor,
                                                           ),
                                                         ),
                                                       ),
@@ -740,11 +769,10 @@ class _HomePageState extends State<HomePage> {
                                       width:
                                           MediaQuery.of(context).size.width -
                                           100,
-                                      //color: Colors.white,
                                       child: Text(
                                         "Designed & Built by Smita Patel 💙 Flutter",
                                         style: TextStyle(
-                                          color: Colors.white.withOpacity(0.4),
+                                          color: colors.whiteColor.withOpacity(0.4),
                                           letterSpacing: 1.75,
                                           fontSize: 14.0,
                                         ),
@@ -772,7 +800,7 @@ class _HomePageState extends State<HomePage> {
                         child: Text(
                           "miss.smitapatel04@gmail.com",
                           style: TextStyle(
-                            color: Colors.grey.withOpacity(0.6),
+                            color: colors.sideLineColor.withOpacity(0.6),
                             letterSpacing: 3.0,
                             fontWeight: FontWeight.w700,
                           ),
@@ -783,7 +811,7 @@ class _HomePageState extends State<HomePage> {
                         child: Container(
                           height: 100,
                           width: 2,
-                          color: Colors.grey.withOpacity(0.4),
+                          color: colors.sideLineColor.withOpacity(0.4),
                         ),
                       ),
                     ],
