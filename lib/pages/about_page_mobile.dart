@@ -204,7 +204,7 @@ class MobileAboutPage extends StatelessWidget {
                       width: size.width * 0.6,
                       child: Image(
                         fit: BoxFit.cover,
-                        image: AssetImage("assets/images/myprofile.jpeg"),
+                        image: AssetImage("images/myprofile.jpeg"),
                       ),
                     ),
                     Container(

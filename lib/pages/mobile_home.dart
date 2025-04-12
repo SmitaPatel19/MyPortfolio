@@ -70,7 +70,7 @@ class _MobileHomeState extends State<MobileHome> {
                       borderRadius: BorderRadius.circular(50),
                       image: DecorationImage(
                         fit: BoxFit.fitWidth,
-                        image: AssetImage("assets/images/myprofilesmall.png"),
+                        image: AssetImage("images/myprofilesmall.png"),
                       ),
                     ),
                   ),
@@ -351,7 +351,7 @@ class _MobileHomeState extends State<MobileHome> {
               SizedBox(height: size.height * 0.07),
 
               MobileProject(
-                imagePath: "assets/images/whatsapp.jpg",
+                imagePath: "images/whatsapp.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/My_Whatsapp",
@@ -366,7 +366,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "assets/images/myAI.jpg",
+                imagePath: "images/myAI.jpg",
                 ontab: () {
                   method.launchURL("https://github.com/SmitaPatel19/My-AI");
                 },
@@ -379,7 +379,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "assets/images/movieapp.jpg",
+                imagePath: "images/movieapp.jpg",
                 ontab: () {
                   method.launchURL("https://github.com/SmitaPatel19/Movie-App");
                 },
@@ -392,7 +392,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "assets/images/myfinance.jpg",
+                imagePath: "images/myfinance.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/MyFinance_App",
@@ -407,7 +407,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "assets/images/wallpaperapp.jpg",
+                imagePath: "images/wallpaperapp.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/Wallpaper_App_API",
@@ -422,7 +422,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "assets/images/bmiapp.jpg",
+                imagePath: "images/bmiapp.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/BMI-App-2nd",
@@ -437,7 +437,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
               //ff
               MobileProject(
-                imagePath: "assets/images/signuplogin.jpg",
+                imagePath: "images/signuplogin.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/login_firebase_auth_database",
@@ -452,7 +452,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "assets/images/news_app.gif",
+                imagePath: "images/news_app.gif",
                 ontab: () {
                   method.launchURL("https://github.com/SmitaPatel19/NewsApp");
                 },
@@ -639,7 +639,7 @@ class _MobileHomeState extends State<MobileHome> {
                     left: -15,
                     child: IconButton(
                       icon: Image.asset(
-                        "assets/images/leetcode.png",
+                        "images/leetcode.png",
                         width: 15,
                         height: 15,
                         color: colors.whiteColor,
@@ -658,7 +658,7 @@ class _MobileHomeState extends State<MobileHome> {
                     left: -15,
                     child: IconButton(
                       icon: Image.asset(
-                        "assets/images/codechef.png",
+                        "images/codechef.png",
                         width: 15,
                         height: 15,
                         color: colors.whiteColor,
