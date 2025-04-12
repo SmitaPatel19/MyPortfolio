@@ -525,6 +525,19 @@ class _HomePageState extends State<HomePage> {
                                       tech3: "http & WebView",
                                     ),
 
+                                    FeatureProject(
+                                      imagePath: "images/currencyapp.gif",
+                                      ontab: () {
+                                        method.launchURL("https://github.com/SmitaPatel19/Currency-Convertor");
+                                      },
+                                      projectDesc:
+                                      "A cross-platform Flutter app to convert currencies in real-time with live exchange rates, offline support, responsive UI, and multi-currency selection.",
+                                      projectTitle: "Currency Converter",
+                                      tech1: "Flutter & Dart",
+                                      tech2: "http",
+                                      tech3: "API",
+                                    ),
+
                                     // MainTiitle(
                                     //   number: "0.4",
                                     //   text: "Other Projects",
