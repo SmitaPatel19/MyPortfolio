@@ -538,6 +538,19 @@ class _HomePageState extends State<HomePage> {
                                       tech3: "API",
                                     ),
 
+                                    FeatureProject(
+                                      imagePath: "images/todoApp.jpg",
+                                      ontab: () {
+                                        method.launchURL("https://github.com/SmitaPatel19/Todo_App");
+                                      },
+                                      projectDesc:
+                                      "A simple yet powerful Flutter task manager with category filters, priority levels, due dates, swipe-to-delete, and task statistics — all stored locally using SharedPreferences for offline use.",
+                                      projectTitle: "Todo App",
+                                      tech1: "Flutter",
+                                      tech2: "SharedPreferences",
+                                      tech3: "Dart",
+                                    ),
+
                                     // MainTiitle(
                                     //   number: "0.4",
                                     //   text: "Other Projects",
