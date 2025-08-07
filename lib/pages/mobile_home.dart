@@ -70,7 +70,7 @@ class _MobileHomeState extends State<MobileHome> {
                       borderRadius: BorderRadius.circular(50),
                       image: DecorationImage(
                         fit: BoxFit.fitWidth,
-                        image: AssetImage("images/myprofilesmall.png"),
+                        image: AssetImage("assets/images/myprofilesmall.png"),
                       ),
                     ),
                   ),
@@ -351,7 +351,7 @@ class _MobileHomeState extends State<MobileHome> {
               SizedBox(height: size.height * 0.07),
 
               MobileProject(
-                imagePath: "images/whatsapp.jpg",
+                imagePath: "assets/images/whatsapp.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/My_Whatsapp",
@@ -366,7 +366,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "images/myAI.jpg",
+                imagePath: "assets/images/myAI.jpg",
                 ontab: () {
                   method.launchURL("https://github.com/SmitaPatel19/My-AI");
                 },
@@ -379,7 +379,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "images/movieapp.jpg",
+                imagePath: "assets/images/movieapp.jpg",
                 ontab: () {
                   method.launchURL("https://github.com/SmitaPatel19/Movie-App");
                 },
@@ -392,7 +392,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "images/myfinance.jpg",
+                imagePath: "assets/images/myfinance.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/MyFinance_App",
@@ -407,7 +407,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "images/wallpaperapp.jpg",
+                imagePath: "assets/images/wallpaperapp.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/Wallpaper_App_API",
@@ -422,7 +422,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "images/bmiapp.jpg",
+                imagePath: "assets/images/bmiapp.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/BMI-App-2nd",
@@ -437,7 +437,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
               //ff
               MobileProject(
-                imagePath: "images/signuplogin.jpg",
+                imagePath: "assets/images/signuplogin.jpg",
                 ontab: () {
                   method.launchURL(
                     "https://github.com/SmitaPatel19/login_firebase_auth_database",
@@ -452,7 +452,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "images/news_app.gif",
+                imagePath: "assets/images/news_app.gif",
                 ontab: () {
                   method.launchURL("https://github.com/SmitaPatel19/NewsApp");
                 },
@@ -465,7 +465,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "images/currencyapp.gif",
+                imagePath: "assets/images/currencyapp.gif",
                 ontab: () {
                   method.launchURL("https://github.com/SmitaPatel19/Currency-Convertor");
                 },
@@ -478,7 +478,7 @@ class _MobileHomeState extends State<MobileHome> {
               ),
 
               MobileProject(
-                imagePath: "images/todoApp.jpg",
+                imagePath: "assets/images/todoApp.jpg",
                 ontab: () {
                   method.launchURL("https://github.com/SmitaPatel19/Todo_App");
                 },
@@ -665,7 +665,7 @@ class _MobileHomeState extends State<MobileHome> {
                     left: -15,
                     child: IconButton(
                       icon: Image.asset(
-                        "images/leetcode.png",
+                        "assets/images/leetcode.png",
                         width: 15,
                         height: 15,
                         color: colors.whiteColor,
@@ -684,7 +684,7 @@ class _MobileHomeState extends State<MobileHome> {
                     left: -15,
                     child: IconButton(
                       icon: Image.asset(
-                        "images/codechef.png",
+                        "assets/images/codechef.png",
                         width: 15,
                         height: 15,
                         color: colors.whiteColor,

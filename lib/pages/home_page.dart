@@ -190,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                         message: 'Leetcode',
                         child: IconButton(
                           icon: Image.asset(
-                            "images/leetcode.png",
+                            "assets/images/leetcode.png",
                             width: 16,
                             height: 16,
                             color: colors.sideIconColor,
@@ -209,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                         message: 'Codechef',
                         child: IconButton(
                           icon: Image.asset(
-                            "images/codechef.png",
+                            "assets/images/codechef.png",
                             width: 16,
                             height: 16,
                             color: colors.sideIconColor,
@@ -405,7 +405,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     SizedBox(height: size.height * 0.04),
                                     FeatureProject(
-                                      imagePath: "images/whatsapp.jpg",
+                                      imagePath: "assets/images/whatsapp.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/My_Whatsapp",
@@ -420,7 +420,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/myAI.jpg",
+                                      imagePath: "assets/images/myAI.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/My-AI",
@@ -435,7 +435,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/movieapp.jpg",
+                                      imagePath: "assets/images/movieapp.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/Movie-App",
@@ -450,7 +450,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/myfinance.jpg",
+                                      imagePath: "assets/images/myfinance.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/MyFinance_App",
@@ -465,7 +465,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/wallpaperapp.jpg",
+                                      imagePath: "assets/images/wallpaperapp.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/Wallpaper_App_API",
@@ -480,7 +480,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/bmiapp.jpg",
+                                      imagePath: "assets/images/bmiapp.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/BMI-App-2nd",
@@ -495,7 +495,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     //ff
                                     FeatureProject(
-                                      imagePath: "images/signuplogin.jpg",
+                                      imagePath: "assets/images/signuplogin.jpg",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/login_firebase_auth_database",
@@ -511,7 +511,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/news_app.gif",
+                                      imagePath: "assets/images/news_app.gif",
                                       ontab: () {
                                         method.launchURL(
                                           "https://github.com/SmitaPatel19/NewsApp",
@@ -526,7 +526,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/currencyapp.gif",
+                                      imagePath: "assets/images/currencyapp.gif",
                                       ontab: () {
                                         method.launchURL("https://github.com/SmitaPatel19/Currency-Convertor");
                                       },
@@ -539,7 +539,7 @@ class _HomePageState extends State<HomePage> {
                                     ),
 
                                     FeatureProject(
-                                      imagePath: "images/todoApp.jpg",
+                                      imagePath: "assets/images/todoApp.jpg",
                                       ontab: () {
                                         method.launchURL("https://github.com/SmitaPatel19/Todo_App");
                                       },
