@@ -250,7 +250,7 @@ class _MobileHomeState extends State<MobileHome> {
                 child: Wrap(
                   children: [
                     Text(
-                      "I'm a third-year student at the prestigious Indian Institute of Information Technology Vadodara, passionate about technology and problem-solving."
+                      "I'm a final-year student at the prestigious Indian Institute of Information Technology Vadodara, passionate about technology and problem-solving."
                       "\n\n🚀 I am passionate about exploring the latest technologies, and I am currently on the lookout for an internship opportunity "
                       "where I can contribute, learn, and grow."
                       "\n🤝 Open to collaboration and always ready to lend a helping hand. Let's build something incredible together!"
@@ -475,6 +475,19 @@ class _MobileHomeState extends State<MobileHome> {
                 tech1: "Flutter & Dart",
                 tech2: "http",
                 tech3: "API",
+              ),
+
+              MobileProject(
+                imagePath: "images/todoApp.jpg",
+                ontab: () {
+                  method.launchURL("https://github.com/SmitaPatel19/Todo_App");
+                },
+                projectDesc:
+                "A simple yet powerful Flutter task manager with category filters, priority levels, due dates, swipe-to-delete, and task statistics — all stored locally using SharedPreferences for offline use.",
+                projectTitle: "Todo App",
+                tech1: "Flutter",
+                tech2: "SharedPreferences",
+                tech3: "Dart",
               ),
 
               SizedBox(height: size.height * 0.08),

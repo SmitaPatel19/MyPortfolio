@@ -308,7 +308,7 @@ class _HomePageState extends State<HomePage> {
                                   Wrap(
                                     children: [
                                       Text(
-                                        "I'm a third-year student at the prestigious Indian Institute of Information Technology Vadodara, passionate about technology and problem-solving."
+                                        "I'm a final-year student at the prestigious Indian Institute of Information Technology Vadodara, passionate about technology and problem-solving."
                                         "\n\n🚀 I am passionate about exploring the latest technologies, and I am currently on the lookout for an internship opportunity "
                                         "where I can contribute, learn, and grow."
                                         "\n🤝 Open to collaboration and always ready to lend a helping hand. Let's build something incredible together!"

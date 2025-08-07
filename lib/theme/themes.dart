@@ -6,7 +6,7 @@ final lightTheme = ThemeData(
   brightness: Brightness.light,
   extensions: [
     AppColors(
-      backgroundColor: Color(0xffCCD6F6),
+      backgroundColor: Color(0xFFF0F5FF),
       sideIconColor: Color(0xff0A192F),
       sideLineColor: Color(0xff0A192F),
       highliteTextColor: Color(0xff8C1946),

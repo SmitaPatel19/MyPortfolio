@@ -11,7 +11,40 @@ class MobileWorkBox extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 60),
+          padding: const EdgeInsets.only(top: 60, bottom: 60),
+          child: WorkCustomData(
+            title: "Flutter Developer Intern",
+            subTitle:
+            "Contributed to a smart AI-powered browser app with features like bookmarks, privacy reports, tab previews, and backend integration. Gained hands-on experience with Flutter, Firebase, API integration, and state management while building advanced UI components.",
+            duration: "April 2025 - Present",
+            company: "AigetAi Private Limited",
+            location: "Work from home",
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 60),
+          child: WorkCustomData(
+            title: "Flutter Developer Intern",
+            subTitle:
+            "Worked on multiple real-life projects including astrology apps (user & expert), cab booking (user, driver, vendor), and social media features. Managed version control, improved UIs and functions in legacy projects, and integrated Firebase services including Google Auth.",
+            duration: "May 2025 - July 2025",
+            company: "Miracuves",
+            location: "Work from home",
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 60),
+          child: WorkCustomData(
+            title: "App Development Trainee",
+            subTitle:
+            "Completed a training program covering Flutter, Dart, RESTful APIs. Built modules for a cross-platform e-commerce app while learning advanced concepts like BLoC for state management. Gained practical experience with UI design, API integration, and scalable architecture.",
+            duration: "April 2025 - July 2025",
+            company: "Reto India",
+            location: "Work from home",
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 60),
           child: WorkCustomData(
             title: "Flutter + Dart Development Project",
             subTitle:

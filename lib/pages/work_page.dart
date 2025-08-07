@@ -20,7 +20,7 @@ class _WorkState extends State<Work> {
     return ConstrainedBox(
       constraints: BoxConstraints.tightFor(
         width: size.width,
-        height: size.height * 1.4,
+        height: size.height * 1.45,
       ),
       child: Column(
         children: [
@@ -71,6 +71,27 @@ class _WorkState extends State<Work> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
+                              CircleAvatar(
+                                backgroundColor: colors.redColor,
+                                child: FaIcon(
+                                  FontAwesomeIcons.diagramProject,
+                                  color: colors.whiteColor,
+                                ),
+                              ),
+                              CircleAvatar(
+                                backgroundColor: colors.deepOrangeColor,
+                                child: FaIcon(
+                                  FontAwesomeIcons.code,
+                                  color: colors.whiteColor,
+                                ),
+                              ),
+                              CircleAvatar(
+                                backgroundColor: colors.deepPurpleColor,
+                                child: FaIcon(
+                                  FontAwesomeIcons.codepen,
+                                  color: colors.whiteColor,
+                                ),
+                              ),
                               CircleAvatar(
                                 backgroundColor: colors.brownColor,
                                 child: FaIcon(

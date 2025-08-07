@@ -5,12 +5,16 @@ class WorkCustomData extends StatelessWidget {
   final String title;
   final String subTitle;
   final String duration;
+  final String? company;          // Nullable
+  final String? location;
 
   const WorkCustomData({
     super.key,
     required this.title,
     required this.subTitle,
     required this.duration,
+    this.company,
+    this.location,
   });
   @override
   Widget build(BuildContext context) {
@@ -28,7 +32,19 @@ class WorkCustomData extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
+        SizedBox(height: 4.0),
+        if (company != null || location != null)
+          Text(
+            "${company ?? ""}${company != null && location != null ? " • " : ""}${location ?? ""}",
+            style: TextStyle(
+              fontSize: 14.0,
+              fontWeight: FontWeight.w600,
+              color: colors.sectionheadingColor.withOpacity(0.8),
+            ),
+          ),
+
         SizedBox(height: 6.0),
+
         Text(
           subTitle,
           style: TextStyle(
@@ -42,7 +58,7 @@ class WorkCustomData extends StatelessWidget {
           duration,
           style: TextStyle(
             fontSize: 12.0,
-            color: colors.sectionheadingColor.withOpacity(0.5),
+            color: colors.sectionheadingColor.withOpacity(0.7),
             fontWeight: FontWeight.w700,
           ),
         ),
